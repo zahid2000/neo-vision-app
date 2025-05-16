@@ -1,0 +1,85 @@
+.carousel-img {
+  width: 100%;
+  max-height: 500px; // Sekilin maksimum hundurluyu
+  height: 500px;     // Carousel-in standart hundurluyu
+  object-fit: contain;
+  background: transparent;
+  display: block;
+  margin: 0 auto;
+  padding-top: 0;      // Yuxaridan bosluq olmasin
+  margin-top: 0;       // Yuxaridan margin olmasin
+}
+
+// Carousel indikatorlarini asagiya sabitle
+.carousel-indicators {
+  position: absolute;
+  bottom: 40px; // indikatoru yuxari qaldirdim
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+// Carousel konteynerinin position-unu duzelt
+#carousel {
+  position: relative;
+  min-height: 500px; // indikatorlarin her zaman gorunmesi ucun
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 0;      // Yuxaridan bosluq olmasin
+  margin-top: 0;       // Yuxaridan margin olmasin
+}
+
+// Responsive duzelişlər
+@media (max-width: 1200px) {
+  .carousel-img {
+    max-height: 400px;
+    height: 400px;
+  }
+  #carousel {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-img {
+    max-height: 300px;
+    height: 300px;
+  }
+  .carousel-indicators {
+    bottom: 25px; // kiçik ekranlarda da yuxarida olsun
+  }
+  #carousel {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    max-height: 200px;
+    height: 200px;
+  }
+  .carousel-indicators {
+    bottom: 15px;
+  }
+  #carousel {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    max-height: 120px;
+    height: 120px;
+  }
+  .carousel-indicators {
+    bottom: 8px;
+  }
+  #carousel {
+    min-height: 120px;
+  }
+}

@@ -20,9 +20,7 @@
             "outputPath": "dist/neo-vision-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -31,13 +29,8 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "public/css/custom.css"
-            ],
-            "scripts": [
-              "public/js/custom.js"
-            ]
+            "styles": ["src/styles.scss", "public/css/custom.css"],
+            "scripts": ["public/js/custom.js"]
           },
           "configurations": {
             "production": {
@@ -58,19 +51,26 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-                "sourceMap": true,
-                "styles": [
+              "sourceMap": true,
+              "styles": [
                 "src/styles.scss",
-                "public/css/custom.css",
                 "node_modules/bootstrap/dist/css/bootstrap.min.css",
                 "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                "node_modules/ngx-toastr/toastr.css"
-                ],
-                "scripts": [
-                "public/js/custom.js",
+                "node_modules/ngx-toastr/toastr.css",
+                "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+                "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
+                "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+                "public/css/custom.css"
+              ],
+              "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
                 "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-                "node_modules/ngx-toastr/bundles/ngx-toastr.umd.min.js"
-                ]
+                "node_modules/wowjs/dist/wow.min.js",
+                "node_modules/owl.carousel/dist/owl.carousel.min.js",
+                "node_modules/jquery.easing/jquery.easing.min.js",
+                "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+                "public/js/custom.js"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -93,10 +93,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -105,9 +102,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
