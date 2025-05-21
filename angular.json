@@ -46,7 +46,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/neo-vision-app/"
             },
             "development": {
               "optimization": false,
@@ -105,6 +106,12 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "neo-vision-app:build:production"
           }
         }
       }
