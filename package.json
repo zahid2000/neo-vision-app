@@ -20,6 +20,7 @@
     "@angular/router": "^19.2.0",
     "@fancyapps/ui": "^5.0.36",
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.6",
     "jquery": "^3.7.1",
     "jquery.easing": "^1.4.1",
