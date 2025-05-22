@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
@@ -19,4 +19,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class NavbarComponent {
   isNavbarCollapsed = true;
+  isMobile = window.innerWidth <= 992;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile = window.innerWidth <= 992;
+  }
 }

@@ -46,14 +46,14 @@
     <nav class="navbar navbar-expand-lg navbar-light justify-content-between" id="mainNav" data-toggle="affix">
         <div class="container d-flex flex-row justify-content-between align-items-center">
             <a class="navbar-brand smooth-scroll me-auto" routerLink="/">
-                <img src="../files/logo.png" alt="RF Paper - Elektronik Raf Etiketi">
+                <img src="files/logo.png" alt="RF Paper - Elektronik Raf Etiketi">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button"
                 (click)="isNavbarCollapsed = !isNavbarCollapsed" [attr.aria-expanded]="!isNavbarCollapsed"
                 aria-controls="navbarResponsive" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div [@collapse]="isNavbarCollapsed ? 'closed' : 'open'" class="navbar-collapse flex-shrink-0 ms-auto"
+            <div [@collapse]="isMobile ? (isNavbarCollapsed ? 'closed' : 'open') : 'open'" class="navbar-collapse flex-shrink-0 ms-auto"
                 id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
