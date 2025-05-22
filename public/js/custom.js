@@ -17,10 +17,13 @@ $(document).ready(function () {
     );
   });
 
-  $("body").scrollspy({
-    target: "#mainNav",
-    offset: 62,
-  });
+  // scrollspy-i yalnız #mainNav varsa işə sal
+  if ($("#mainNav").length) {
+    $("body").scrollspy({
+      target: "#mainNav",
+      offset: 62,
+    });
+  }
 
   if ($(".toggle .toggle-title").hasClass("active")) {
     $(".toggle .toggle-title.active")
