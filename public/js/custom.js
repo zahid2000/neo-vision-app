@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
 
   // scrollspy-i yalnız #mainNav varsa işə sal
-  if ($("#mainNav").length) {
+  if ($("#mainNav")) {
     $("body").scrollspy({
       target: "#mainNav",
       offset: 62,
