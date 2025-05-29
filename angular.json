@@ -68,7 +68,6 @@
                 "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
                 "node_modules/wowjs/dist/wow.min.js",
                 "node_modules/owl.carousel/dist/owl.carousel.min.js",
-                "node_modules/jquery.easing/jquery.easing.min.js",
                 "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
                 "public/js/custom.js"
               ]
