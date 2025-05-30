@@ -149,6 +149,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!isMobile) {
     // Force enable hover mode for desktop on initial load
     enableHoverMode();
+  } else {
+    // Ensure click mode is enabled for mobile on initial load
+    clickEnabled = true;
   }
 
   // Bootstrap carousel (assuming Bootstrap JS is still included)
@@ -402,17 +405,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Dropdown fix for mobile with animation - using event delegation
   document.addEventListener('click', function(e) {
-    if (e.target.closest('.navbar-nav .dropdown-toggle')) {
-      if (window.innerWidth < 992) {
+    // Only handle dropdowns that are NOT in the Angular navbar component
+    if (e.target.closest('.navbar-nav .dropdown-toggle') && !e.target.closest('app-navbar')) {
+      if (window.innerWidth < 992 && clickEnabled) {
         e.preventDefault();
         const parent = e.target.closest('.dropdown');
         const menu = parent.querySelector('.dropdown-menu');
         
         // Close other open dropdowns with animation
-        const openDropdowns = document.querySelectorAll('.navbar .dropdown-menu.show');
+        const openDropdowns = document.querySelectorAll('.navbar .dropdown-menu.show:not([id^="navbarResponsive"] .dropdown-menu)');
         openDropdowns.forEach(dropdown => {
           if (dropdown !== menu) {
-            // Slide up animation
+            // Slide up animation for other dropdowns
+            const dropdownParent = dropdown.closest('.dropdown');
             dropdown.style.height = dropdown.scrollHeight + 'px';
             dropdown.style.transition = 'height 200ms';
             dropdown.style.overflow = 'hidden';
@@ -422,15 +427,14 @@ document.addEventListener('DOMContentLoaded', function() {
               setTimeout(() => {
                 dropdown.classList.remove('show');
                 dropdown.style.display = 'none';
-                dropdown.style.height = '';
-                dropdown.style.overflow = '';
+                dropdown.removeAttribute('style');
               }, 200);
             }, 10);
           }
         });
         
         if (menu.classList.contains('show')) {
-          // Slide up animation
+          // Close this dropdown (slide up animation)
           menu.style.height = menu.scrollHeight + 'px';
           menu.style.transition = 'height 200ms';
           menu.style.overflow = 'hidden';
@@ -440,12 +444,11 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
               menu.classList.remove('show');
               menu.style.display = 'none';
-              menu.style.height = '';
-              menu.style.overflow = '';
+              menu.removeAttribute('style');
             }, 200);
           }, 10);
         } else {
-          // Slide down animation
+          // Open this dropdown (slide down animation)
           menu.classList.add('show');
           menu.style.display = 'block';
           menu.style.height = '0';
@@ -458,6 +461,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
               menu.style.height = '';
               menu.style.overflow = '';
+              menu.style.transition = '';
             }, 200);
           }, 10);
         }
@@ -466,27 +470,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Close dropdowns when burger menu is closed
-  const navbarTogglers = document.querySelectorAll('.navbar-toggler');
+  const navbarTogglers = document.querySelectorAll('.navbar-toggler:not(app-navbar .navbar-toggler)');
   navbarTogglers.forEach(toggler => {
     toggler.addEventListener('click', function() {
-      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const navbarCollapse = document.querySelector('.navbar-collapse:not(app-navbar .navbar-collapse)');
       if (navbarCollapse && !navbarCollapse.classList.contains('show')) {
-        const openDropdowns = document.querySelectorAll('.navbar .dropdown-menu.show');
+        const openDropdowns = document.querySelectorAll('.navbar .dropdown-menu.show:not(app-navbar .dropdown-menu)');
         openDropdowns.forEach(dropdown => {
-          // Slide up animation
-          dropdown.style.height = dropdown.scrollHeight + 'px';
-          dropdown.style.transition = 'height 200ms';
-          dropdown.style.overflow = 'hidden';
-          
-          setTimeout(() => {
-            dropdown.style.height = '0';
-            setTimeout(() => {
-              dropdown.classList.remove('show');
-              dropdown.style.display = 'none';
-              dropdown.style.height = '';
-              dropdown.style.overflow = '';
-            }, 200);
-          }, 10);
+          // Close all dropdowns when navbar is closed
+          dropdown.classList.remove('show');
+          dropdown.style.display = 'none';
+          dropdown.removeAttribute('style');
         });
       }
     });
@@ -513,10 +507,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Switching from desktop to mobile
         disableHoverMode();
         clickEnabled = true;
+        // Reset any open dropdowns
+        resetDropdownMenus();
       } else {
         // Switching from mobile to desktop
         resetDropdownMenus();
         enableHoverMode();
+        clickEnabled = false;
       }
     }
     

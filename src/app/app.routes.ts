@@ -9,5 +9,8 @@ export const routes: Routes = [
   { path: 'contact', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) },
   { path: 'galery', loadComponent: () => import('./components/galery/galery.component').then(m => m.GaleryComponent) },
   { path: 'download-center', loadComponent: () => import('./components/download-center/download-center.component').then(m => m.DownloadCenterComponent) },
+  { path: 'products', loadComponent: () => import('./components/product-list/product-list.component').then(m => m.ProductListComponent) },
+  { path: 'products/:category', loadComponent: () => import('./components/product-list/product-list.component').then(m => m.ProductListComponent) },
+  { path: 'product/:id', loadComponent: () => import('./components/product-detail/product-detail.component').then(m => m.ProductDetailComponent) },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

@@ -1,0 +1,80 @@
+<section id="product-detail" class="product-detail py-5">
+  <div class="container" *ngIf="product$ | async as product; else loading">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="product-image">
+          <img [src]="product.imagePath" [alt]="product.name" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="product-info">
+          <h2 class="product-title">{{ product.name }}</h2>
+          <p class="product-code text-danger font-weight-bold">{{ product.stockCode }}</p>
+          
+          <div class="product-description mt-4">
+            <h4>Ürün Açıklaması</h4>
+            <div class="heading-border-light mb-3"></div>
+            <div *ngIf="product.description && product.description.length > 0">
+              <p *ngFor="let desc of product.description">{{ desc }}</p>
+            </div>
+            <div *ngIf="!product.description || product.description.length === 0">
+              <p>Bu ürün için açıklama bulunmamaktadır.</p>
+            </div>
+          </div>
+          
+          <div class="product-details mt-4" *ngIf="product.technicalData">
+            <h4>Teknik Özellikler</h4>
+            <div class="heading-border-light mb-3"></div>
+            <div class="row">
+              <div class="col-md-6" *ngIf="product.technicalData.dimensions">
+                <p><strong>Boyutlar:</strong> {{ product.technicalData.dimensions }}</p>
+              </div>
+              <div class="col-md-6" *ngIf="product.technicalData.material">
+                <p><strong>Malzeme:</strong> {{ product.technicalData.material }}</p>
+              </div>
+              <div class="col-md-6" *ngIf="product.technicalData.weight">
+                <p><strong>Ağırlık:</strong> {{ product.technicalData.weight }}</p>
+              </div>
+              <div class="col-md-6" *ngIf="product.technicalData.color">
+                <p><strong>Renk:</strong> {{ product.technicalData.color }}</p>
+              </div>
+            </div>
+            
+            <div *ngIf="product.technicalData.specifications && product.technicalData.specifications.length > 0" class="mt-3">
+              <h5>Özellikler</h5>
+              <ul>
+                <li *ngFor="let spec of product.technicalData.specifications">{{ spec }}</li>
+              </ul>
+            </div>
+            
+            <div *ngIf="product.technicalData.compatibility && product.technicalData.compatibility.length > 0" class="mt-3">
+              <h5>Uyumluluk</h5>
+              <ul>
+                <li *ngFor="let compat of product.technicalData.compatibility">{{ compat }}</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="product-action mt-5">
+            <a href="javascript:void(0)" class="btn btn-danger">
+              <i class="fas fa-envelope"></i> Bilgi İste
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center py-5">
+          <h3>Ürün yükleniyor...</h3>
+          <div class="spinner-border text-danger mt-3" role="status">
+            <span class="sr-only">Yükleniyor...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</section> 

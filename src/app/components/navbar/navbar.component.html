@@ -70,17 +70,30 @@
                         <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-3"
                             aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">MƏHSULLAR</a>
                         <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-3">
-                            <a class="dropdown-item" href="kategoriler/demo-kitleri.html"><span>Demo Kitləri</span></a>
-                            <a class="dropdown-item" href="kategoriler/elektronik-raf-etiketleri.html"><span>Elektronik
-                                    Rəf Etiketləri</span></a>
-                            <a class="dropdown-item"
-                                href="kategoriler/ozel-elektronik-raf-etiketleri.html"><span>Fərdiləşmiş Elektronik Rəf
-                                    Etiketləri</span></a>
-                            <a class="dropdown-item"
-                                href="kategoriler/yardimci-ekipman-ve-yazilimlar.html"><span>Köməkçi Avadanlıq və
-                                    Proqram Təminatı</span></a>
-                            <a class="dropdown-item" href="kategoriler/montaj-aksesuarlari.html"><span>Montaj
-                                    Aksesuarları</span></a>
+                            <ng-container *ngFor="let category of categories">
+                                <!-- Main categories -->
+                                <ng-container *ngIf="!category.children || category.children.length === 0">
+                                    <a class="dropdown-item" [routerLink]="['/products', category.slug]">
+                                        <span>{{ category.name }}</span>
+                                    </a>
+                                </ng-container>
+                                
+                                <!-- Categories with subcategories -->
+                                <ng-container *ngIf="category.children && category.children.length > 0">
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" [routerLink]="['/products', category.slug]">
+                                            <span>{{ category.name }}</span>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a *ngFor="let subCategory of category.children" 
+                                               class="dropdown-item" 
+                                               [routerLink]="['/products', subCategory.slug]">
+                                                <span>{{ subCategory.name }}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </ng-container>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link smooth-scroll" routerLink="how-it-works">Necə Çalışır?</a>
