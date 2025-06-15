@@ -8,12 +8,12 @@
     "imagePath": "files/urunler/RFD01.0001.png",
     "categoryId": 1,
     "innerProducts": [
-      {"stockCode": "RFE01.0154"},
-      {"stockCode": "RFE01.0213"},
-      {"stockCode": "RFE01.0290"},
-      {"stockCode": "RFE01.0420"},
-      {"stockCode": "RFG01.0001"},
-      {"stockCode": "RFU01.0001"}
+      {"id": 3, "quantity": 1},
+      {"id": 4, "quantity": 1},
+      {"id": 5, "quantity": 1},
+      {"id": 6, "quantity": 1},
+      {"id": 9, "quantity": 1},
+      {"id": 10, "quantity": 1}
     ]
   },
   {
@@ -25,10 +25,10 @@
     "imagePath": "files/urunler/RFD01.0001.png",
     "categoryId": 1,
     "innerProducts": [
-      {"stockCode": "RFE01.0154"},
-      {"stockCode": "RFE01.0213"},
-      {"stockCode": "RFG01.0001"},
-      {"stockCode": "RFU01.0001"}
+      {"id": 3, "quantity": 1},
+      {"id": 4, "quantity": 1},
+      {"id": 9, "quantity": 1},
+      {"id": 10, "quantity": 1}
     ]
   },
   {
