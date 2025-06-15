@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product.model';
+import { Product, InnerProduct } from '../models/product.model';
 import { TechnicalData } from "../models/technical.data.model";
 import { AccessoriesType } from '../models/enums/accessories-type.enum';
 import { ProductType } from '../models/enums/product-type.enum';
@@ -111,7 +111,7 @@ export class ProductService {
   
   constructor(private http: HttpClient) { }
 
-  private getProductsData(): Observable<Product[]> {
+  getProductsData(): Observable<Product[]> {
     return this.http.get<Product[]>('data/products.json').pipe(
       catchError(this.handleError<Product[]>('getProductsData', []))
     );
@@ -138,8 +138,14 @@ export class ProductService {
           category.products.forEach(demoKit => {
             if (demoKit.innerProducts && demoKit.innerProducts.length > 0) {
               demoKit.innerProducts = demoKit.innerProducts.map(innerProd => {
-                const fullProduct = products.find(p => p.stockCode === innerProd.stockCode);
-                return fullProduct || innerProd; // Return full product if found, else original partial
+                const fullProduct = products.find(p => p.id === innerProd.id);
+                if (!fullProduct) {
+                  return innerProd;
+                }
+                return {
+                  id: fullProduct.id,
+                  quantity: innerProd.quantity
+                };
               });
             }
           });
@@ -152,7 +158,6 @@ export class ProductService {
     return this.getProductsData().pipe(
       map(products => {
         if (categoryId === null) {
-          // If categoryId is null, return all products from all categories
           const allProducts: Product[] = [];
           const collectProducts = (cats: ProductCategory[]) => {
             cats.forEach(cat => {
@@ -175,7 +180,7 @@ export class ProductService {
               targetCategory = cat;
               return;
             }
-      if (cat.children) {
+            if (cat.children) {
               findCategory(cat.children, id);
               if (targetCategory) return;
             }
@@ -184,7 +189,6 @@ export class ProductService {
         findCategory(this.categories, categoryId);
 
         if (targetCategory && targetCategory.children && targetCategory.children.length > 0) {
-          // If it's a parent category with children, collect products from all child categories
           const childProducts: Product[] = [];
           const collectChildProducts = (cats: ProductCategory[]) => {
             cats.forEach(childCat => {
@@ -198,10 +202,9 @@ export class ProductService {
           collectChildProducts(targetCategory.children);
           return childProducts;
         } else if (targetCategory) {
-          // If it's a leaf category, return its products
           return products.filter(p => p.categoryId === categoryId);
         } else {
-          return []; // Category not found
+          return [];
         }
       })
     );
@@ -213,8 +216,14 @@ export class ProductService {
         const product = products.find(p => p.id === id);
         if (product && product.productType === ProductType.DemoKit && product.innerProducts && product.innerProducts.length > 0) {
           product.innerProducts = product.innerProducts.map(innerProd => {
-            const fullProduct = products.find(p => p.stockCode === innerProd.stockCode);
-            return fullProduct || innerProd; // Ensure inner products are full product objects
+            const fullProduct = products.find(p => p.id === innerProd.id);
+            if (!fullProduct) {
+              return innerProd;
+            }
+            return {
+              id: fullProduct.id,
+              quantity: innerProd.quantity
+            };
           });
         }
         return product;
@@ -230,10 +239,9 @@ export class ProductService {
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      console.error(error); // log to console instead
+      console.error(error);
       console.log(`${operation} failed: ${error.message}`);
       return of(result as T);
     };
   }
-
 }

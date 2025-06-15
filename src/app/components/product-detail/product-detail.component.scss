@@ -66,6 +66,36 @@
       }
     }
   }
+
+  .table {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    
+    th, td {
+      border: 1px solid #dee2e6;
+      padding: 0.75rem;
+    }
+
+    th {
+      background-color: #e9ecef;
+      font-weight: 600;
+    }
+  }
+
+  .list-group {
+    .list-group-item {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  .alert-info {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
 }
 
 .product-card {
@@ -231,21 +261,18 @@
     
     th, td {
       padding: 1rem;
-      border-bottom: 1px solid #eee;
+      border: 1px solid #dee2e6;
     }
 
     th {
       font-weight: 600;
       color: #555;
       width: 40%;
-      background: #f8f9fa;
+      background: #e9ecef;
     }
 
     td {
       color: #333;
-    }
-
-    tr:hover {
       background: #f8f9fa;
     }
   }
@@ -258,18 +285,17 @@
 
     .list-group-item {
       padding: 1rem 1.5rem;
-      border: none;
-      border-bottom: 1px solid #eee;
-      background: #fff;
+      border: 1px solid #dee2e6;
+      background: #f8f9fa;
       color: #555;
       transition: all 0.3s ease;
 
       &:last-child {
-        border-bottom: none;
+        border-bottom: 1px solid #dee2e6;
       }
 
       &:hover {
-        background: #f8f9fa;
+        background: #e9ecef;
         padding-left: 2rem;
       }
     }
@@ -278,8 +304,8 @@
   .alert {
     border-radius: 8px;
     padding: 1rem 1.5rem;
-    border: none;
-    background: #e8f4ff;
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
     color: #0d6efd;
     box-shadow: 0 2px 8px rgba(13,110,253,0.1);
 

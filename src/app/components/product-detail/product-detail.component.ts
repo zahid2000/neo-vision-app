@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap, map, tap } from 'rxjs/operators';
 import { AsyncPipe, CommonModule, NgForOf, NgIf } from '@angular/common';
-import { Product } from '../../models/product.model';
+import { Product, InnerProduct } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -16,6 +16,7 @@ import { ProductService } from '../../services/product.service';
 export class ProductDetailComponent implements OnInit {
   product$: Observable<Product | undefined> = of(undefined);
   relatedProducts$: Observable<Product[]> = of([]);
+  private allProducts: Product[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -23,6 +24,11 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // First get all products to use for inner product details
+    this.productService.getProductsData().subscribe(products => {
+      this.allProducts = products;
+    });
+
     this.product$ = this.route.paramMap.pipe(
       switchMap(params => {
         const productId = Number(params.get('id'));
@@ -40,6 +46,10 @@ export class ProductDetailComponent implements OnInit {
         return product;
       })
     );
+  }
+
+  getInnerProductDetails(innerProduct: InnerProduct): Product | undefined {
+    return this.allProducts.find(p => p.id === innerProduct.id);
   }
 
   // Social sharing methods
