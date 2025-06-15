@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - for-git-pages # using the current branch name
+      - main
 
 permissions:
   contents: write
