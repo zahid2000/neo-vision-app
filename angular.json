@@ -29,8 +29,25 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss", "public/css/custom.css"],
-            "scripts": ["public/js/custom.js"]
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
+              "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+              "public/css/custom.css"
+            ],
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/wowjs/dist/wow.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+              "public/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
