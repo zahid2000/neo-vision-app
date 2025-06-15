@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
-import { ProductCategory } from '../../models/product.model';
+import { ProductCategory } from '../../models/product.category.model';
 
 @Component({
   selector: 'app-navbar',

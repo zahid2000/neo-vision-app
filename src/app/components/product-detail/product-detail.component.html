@@ -9,56 +9,173 @@
       <div class="col-lg-6">
         <div class="product-info">
           <h2 class="product-title">{{ product.name }}</h2>
-          <p class="product-code text-danger font-weight-bold">{{ product.stockCode }}</p>
+          <p class="product-code text-danger font-weight-bold">Məhsul Kodu: {{ product.stockCode }}</p>
           
+          <div class="social-share mt-3 mb-4 d-flex justify-content-end">
+            <a [href]="getFacebookShareUrl()" 
+               target="_blank" 
+               class="me-2 facebook" 
+               title="Facebook-da paylaş">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a [href]="getTwitterShareUrl(product.name)" 
+               target="_blank" 
+               class="me-2 twitter" 
+               title="Twitter-də paylaş">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a [href]="getWhatsAppShareUrl(product.name)" 
+               target="_blank" 
+               class="me-2 whatsapp" 
+               title="WhatsApp-də paylaş">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a [href]="getLinkedInShareUrl(product.name)" 
+               target="_blank" 
+               class="linkedin" 
+               title="LinkedIn-də paylaş">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+
           <div class="product-description mt-4">
-            <h4>Ürün Açıklaması</h4>
+            <h4>Məhsul Açıqlaması</h4>
             <div class="heading-border-light mb-3"></div>
             <div *ngIf="product.description && product.description.length > 0">
               <p *ngFor="let desc of product.description">{{ desc }}</p>
             </div>
             <div *ngIf="!product.description || product.description.length === 0">
-              <p>Bu ürün için açıklama bulunmamaktadır.</p>
+              <p>Bu məhsul üçün açıqlama tapılmadı.</p>
             </div>
           </div>
-          
-          <div class="product-details mt-4" *ngIf="product.technicalData">
-            <h4>Teknik Özellikler</h4>
+
+          <div class="demo-kit-contents mt-4" *ngIf="product.innerProducts && product.innerProducts.length > 0">
+            <h4>Paket Tərkibi</h4>
             <div class="heading-border-light mb-3"></div>
-            <div class="row">
-              <div class="col-md-6" *ngIf="product.technicalData.dimensions">
-                <p><strong>Boyutlar:</strong> {{ product.technicalData.dimensions }}</p>
-              </div>
-              <div class="col-md-6" *ngIf="product.technicalData.material">
-                <p><strong>Malzeme:</strong> {{ product.technicalData.material }}</p>
-              </div>
-              <div class="col-md-6" *ngIf="product.technicalData.weight">
-                <p><strong>Ağırlık:</strong> {{ product.technicalData.weight }}</p>
-              </div>
-              <div class="col-md-6" *ngIf="product.technicalData.color">
-                <p><strong>Renk:</strong> {{ product.technicalData.color }}</p>
-              </div>
-            </div>
-            
-            <div *ngIf="product.technicalData.specifications && product.technicalData.specifications.length > 0" class="mt-3">
-              <h5>Özellikler</h5>
-              <ul>
-                <li *ngFor="let spec of product.technicalData.specifications">{{ spec }}</li>
-              </ul>
-            </div>
-            
-            <div *ngIf="product.technicalData.compatibility && product.technicalData.compatibility.length > 0" class="mt-3">
-              <h5>Uyumluluk</h5>
-              <ul>
-                <li *ngFor="let compat of product.technicalData.compatibility">{{ compat }}</li>
-              </ul>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>STOK KODU</th>
+                    <th>STOK ADI</th>
+                    <th>MİQDAR</th>
+                    <th>ƏDƏD</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of product.innerProducts">
+                    <td>{{ item.stockCode }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>1</td>
+                    <td>ƏDƏD</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          
-          <div class="product-action mt-5">
-            <a href="javascript:void(0)" class="btn btn-danger">
-              <i class="fas fa-envelope"></i> Bilgi İste
-            </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Data Section - Full Width -->
+    <div class="row mt-4" *ngIf="product.technicalData">
+      <div class="col-12">
+        <div class="product-details">
+          <div class="row">
+            <!-- Left Column - Basic Technical Data -->
+            <div class="col-md-6">
+              <h4>Texniki Məlumatlar</h4>
+              <div class="heading-border-light mb-3"></div>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr *ngIf="product.technicalData.dimensions">
+                      <th>Ölçülər</th>
+                      <td>{{product.technicalData.dimensions}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.weight">
+                      <th>Çəki</th>
+                      <td>{{product.technicalData.weight}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.operatingTemperature">
+                      <th>İşləmə Temperaturu</th>
+                      <td>{{product.technicalData.operatingTemperature}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.storageTemperature">
+                      <th>Saxlama Temperaturu</th>
+                      <td>{{product.technicalData.storageTemperature}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.humidity">
+                      <th>Rütubət</th>
+                      <td>{{product.technicalData.humidity}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.batteryType">
+                      <th>Batareya Tipi</th>
+                      <td>{{product.technicalData.batteryType}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.batteryLife">
+                      <th>Batareya Ömrü</th>
+                      <td>{{product.technicalData.batteryLife}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.powerConsumption">
+                      <th>Enerji Sərfiyyatı</th>
+                      <td>{{product.technicalData.powerConsumption}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.displayType">
+                      <th>Ekran Tipi</th>
+                      <td>{{product.technicalData.displayType}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.displaySize">
+                      <th>Ekran Ölçüsü</th>
+                      <td>{{product.technicalData.displaySize}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.resolution">
+                      <th>Təsvir Qabiliyyəti</th>
+                      <td>{{product.technicalData.resolution}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.viewingAngle">
+                      <th>Baxış Bucağı</th>
+                      <td>{{product.technicalData.viewingAngle}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.refreshRate">
+                      <th>Yeniləmə Sürəti</th>
+                      <td>{{product.technicalData.refreshRate}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.communicationProtocol">
+                      <th>Rabitə Protokolu</th>
+                      <td>{{product.technicalData.communicationProtocol}}</td>
+                    </tr>
+                    <tr *ngIf="product.technicalData.wirelessRange">
+                      <th>Simsiz Məsafə</th>
+                      <td>{{product.technicalData.wirelessRange}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Column - Features, Specifications, and Warranty -->
+            <div class="col-md-6">
+              <h4>Xüsusiyyətlər</h4>
+              <div class="heading-border-light mb-3"></div>
+              <ul class="list-group mb-4" *ngIf="product.technicalData.features">
+                <li class="list-group-item" *ngFor="let feature of product.technicalData.features">
+                  {{feature}}
+                </li>
+              </ul>
+
+              <h4>Spesifikasiyalar</h4>
+              <div class="heading-border-light mb-3"></div>
+              <ul class="list-group mb-4" *ngIf="product.technicalData.specifications">
+                <li class="list-group-item" *ngFor="let spec of product.technicalData.specifications">
+                  {{spec}}
+                </li>
+              </ul>
+
+              <div class="alert alert-info" *ngIf="product.technicalData.warranty">
+                <strong>Zəmanət:</strong> {{product.technicalData.warranty}}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,12 +186,37 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center py-5">
-          <h3>Ürün yükleniyor...</h3>
+          <h3>Məhsul yüklənir...</h3>
           <div class="spinner-border text-danger mt-3" role="status">
-            <span class="sr-only">Yükleniyor...</span>
+            <span class="sr-only">Yüklənir...</span>
           </div>
         </div>
       </div>
     </div>
   </ng-template>
+</section>
+
+<section id="related-products" class="py-5" *ngIf="relatedProducts$ | async as relatedProducts">
+  <div class="container">
+    <div class="row title-bar mb-4">
+      <div class="col-md-12">
+        <h4 class="wow fadeInUp">Bu Kateqoriyadakı Digər Məhsullar</h4>
+        <div class="heading-border-light"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4" *ngFor="let rProduct of relatedProducts">
+        <div class="card product-card h-100">
+          <img [src]="rProduct.imagePath" class="card-img-top" [alt]="rProduct.name">
+          <div class="card-body text-center">
+            <h6 class="card-subtitle mb-2 text-danger">{{ rProduct.stockCode }}</h6>
+            <h5 class="card-title">{{ rProduct.name }}</h5>
+            <a [routerLink]="['/product', rProduct.id]" class="btn btn-sm btn-outline-danger mt-3">
+              <i class="fas fa-arrow-right"></i> Məhsulu İncələ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section> 

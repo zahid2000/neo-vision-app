@@ -1,0 +1,64 @@
+.owl-carousel {
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+
+  .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+  }
+
+  .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  .owl-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.story-descb {
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    
+    img {
+      opacity: 0.8;
+    }
+    
+    h6 {
+      color: #ed1c24;
+    }
+  }
+}

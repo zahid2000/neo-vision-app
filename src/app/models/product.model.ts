@@ -1,5 +1,6 @@
 import { AccessoriesType } from "./enums/accessories-type.enum";
 import { ProductType } from "./enums/product-type.enum";
+import { TechnicalData } from "./technical.data.model";
 
 export interface Product {
   id: number;
@@ -13,26 +14,7 @@ export interface Product {
   innerProducts?: Product[] | null;
   imagePath: string;
   technicalData?: TechnicalData | null;
-  category?: string;
-  detailUrl?: string;
+  categoryId: number;
 }
 
-export interface TechnicalData {
-  dimensions?: string;
-  material?: string;
-  weight?: string;
-  color?: string;
-  compatibility?: string[];
-  specifications?: string[];
-  [key: string]: any;
-}
-
-export interface ProductCategory {
-  id: number;
-  name: string;
-  slug: string;
-  parentId?: number | null;
-  children?: ProductCategory[] | null;
-  products?: Product[] | null;
-}
 

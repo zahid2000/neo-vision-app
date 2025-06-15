@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Product, ProductCategory, TechnicalData } from '../models/product.model';
+import { Product } from '../models/product.model';
+import { TechnicalData } from "../models/technical.data.model";
 import { AccessoriesType } from '../models/enums/accessories-type.enum';
 import { ProductType } from '../models/enums/product-type.enum';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
+import { ProductCategory } from '../models/product.category.model';
+import { HttpClient } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,25 +15,25 @@ export class ProductService {
   private categories: ProductCategory[] = [
     {
       id: 1,
-      name: 'Demo Kitleri',
+      name: 'Demo Dəstləri',
       slug: 'demo-kitleri',
       products: []
     },
     {
       id: 2,
-      name: 'Elektronik Raf Etiketleri',
+      name: 'Elektronik Raf Etiketləri',
       slug: 'elektronik-raf-etiketleri',
       products: []
     },
     {
       id: 3,
-      name: 'Özel Elektronik Raf Etiketleri',
+      name: 'Xüsusi Elektronik Raf Etiketləri',
       slug: 'ozel-elektronik-raf-etiketleri',
       products: []
     },
     {
       id: 4,
-      name: 'Yardımcı Ekipman ve Yazılımlar',
+      name: 'Köməkçi Avadanlıq və Proqram Təminatı',
       slug: 'yardimci-ekipman-ve-yazilimlar',
       products: []
     },
@@ -40,14 +44,14 @@ export class ProductService {
       children: [
         {
           id: 6,
-          name: 'Raylar',
+          name: 'Rellər',
           slug: 'raylar',
           parentId: 5,
           products: []
         },
         {
           id: 7,
-          name: 'Ray Aksesuarları',
+          name: 'Rel Aksesuarları',
           slug: 'ray-aksesuarlari',
           parentId: 5,
           products: []
@@ -68,35 +72,35 @@ export class ProductService {
         },
         {
           id: 10,
-          name: 'Askılar',
+          name: 'Asqılar',
           slug: 'askilar',
           parentId: 5,
           products: []
         },
         {
           id: 11,
-          name: 'Raf Klipsleri',
+          name: 'Raf Klipsləri',
           slug: 'raf-klipsleri',
           parentId: 5,
           products: []
         },
         {
           id: 12,
-          name: 'Mıknatıslı Tutucular',
+          name: 'Maqnitli Tutucular',
           slug: 'miknatisli-tutucular',
           parentId: 5,
           products: []
         },
         {
           id: 13,
-          name: 'Saplama Tipler',
+          name: 'Vint Tipləri',
           slug: 'saplama-tipler',
           parentId: 5,
           products: []
         },
         {
           id: 14,
-          name: 'Sepet Tutucular',
+          name: 'Səbət Tutucular',
           slug: 'sepet-tutucular',
           parentId: 5,
           products: []
@@ -105,127 +109,131 @@ export class ProductService {
     }
   ];
   
-  private products: Product[] = [];
+  constructor(private http: HttpClient) { }
 
-  constructor() { 
-    this.initializeProducts();
-  }
-
-  private initializeProducts() {
-    // Demo kitleri ürünleri
-    this.addProducts([
-      {
-        id: 1,
-        name: 'ESL DEMO KIT FULL',
-        stockCode: 'RFD01.0001',
-        description: ['Demo Kit Full açıklaması'],
-        productType: ProductType.DemoKit,
-        imagePath: '../../files/urunler/RFD01.0001.png',
-        category: 'demo-kitleri',
-        detailUrl: '../urunler/esl-demo-kit-full.html'
-      },
-      {
-        id: 2,
-        name: 'ESL DEMO KIT PLUS',
-        stockCode: 'RFD01.0002',
-        description: ['Demo Kit Plus açıklaması'],
-        productType: ProductType.DemoKit,
-        imagePath: '../../files/urunler/RFD01.0001.png',
-        category: 'demo-kitleri',
-        detailUrl: '../urunler/esl-demo-kit-plus.html'
-      }
-    ], 'demo-kitleri');
-
-    // Elektronik raf etiketleri ürünleri
-    this.addProducts([
-      {
-        id: 3,
-        name: '1.54" ELEKTRONİK RAF ETİKETİ',
-        stockCode: 'RFE01.0154',
-        description: ['1.54" Elektronik Raf Etiketi açıklaması'],
-        productType: ProductType.ESL,
-        imagePath: '../../files/urunler/RFE01.0154.png',
-        category: 'elektronik-raf-etiketleri',
-        detailUrl: '../urunler/154-elektronik-raf-etiketi.html'
-      },
-      {
-        id: 4,
-        name: '2.13" ELEKTRONİK RAF ETİKETİ',
-        stockCode: 'RFE01.0213',
-        description: ['2.13" Elektronik Raf Etiketi açıklaması'],
-        productType: ProductType.ESL,
-        imagePath: '../../files/urunler/RFE01.0213.png',
-        category: 'elektronik-raf-etiketleri',
-        detailUrl: '../urunler/213-elektronik-raf-etiketi.html'
-      }
-    ], 'elektronik-raf-etiketleri');
-
-    // Raylar ürünleri
-    this.addProducts([
-      {
-        id: 20,
-        name: 'ESL RAY DÜZ 1m',
-        stockCode: 'RFA01.0101',
-        description: ['ESL Ray Düz 1m açıklaması'],
-        productType: ProductType.Accessories,
-        accessoriesType: AccessoriesType.Rail,
-        imagePath: '../../files/urunler/RFA01.0101.png',
-        category: 'raylar',
-        detailUrl: '../urunler/esl-ray-duz-1m.html'
-      },
-      {
-        id: 21,
-        name: 'ESL RAY DÜZ 1m (BANTLI)',
-        stockCode: 'RFA01.0102',
-        description: ['ESL Ray Düz 1m (Bantlı) açıklaması'],
-        productType: ProductType.Accessories,
-        accessoriesType: AccessoriesType.Rail,
-        imagePath: '../../files/urunler/RFA01.0102.png',
-        category: 'raylar',
-        detailUrl: '../urunler/esl-ray-duz-1m-bantli.html'
-      }
-    ], 'raylar');
-  }
-
-  private addProducts(products: Product[], categorySlug: string): void {
-    this.products = [...this.products, ...products];
-    
-    const category = this.findCategoryBySlug(categorySlug);
-    if (category) {
-      category.products = products;
-    }
-  }
-
-  private findCategoryBySlug(slug: string): ProductCategory | null {
-    // Search in main categories
-    const mainCategory = this.categories.find(cat => cat.slug === slug);
-    if (mainCategory) return mainCategory;
-    
-    // Search in subcategories
-    for (const cat of this.categories) {
-      if (cat.children) {
-        const subCategory = cat.children.find(sub => sub.slug === slug);
-        if (subCategory) return subCategory;
-      }
-    }
-    
-    return null;
+  private getProductsData(): Observable<Product[]> {
+    return this.http.get<Product[]>('data/products.json').pipe(
+      catchError(this.handleError<Product[]>('getProductsData', []))
+    );
   }
 
   getCategories(): Observable<ProductCategory[]> {
-    return of(this.categories);
+    return this.getProductsData().pipe(
+      map(products => {
+        const categoriesCopy = JSON.parse(JSON.stringify(this.categories)); // Deep copy
+        this.assignProductsToCategories(products, categoriesCopy);
+        return categoriesCopy;
+      })
+    );
   }
-  
-  getProductsByCategory(categorySlug: string): Observable<Product[]> {
-    const category = this.findCategoryBySlug(categorySlug);
-    return of(category?.products || []);
+
+  private assignProductsToCategories(products: Product[], categories: ProductCategory[]) {
+    categories.forEach(category => {
+      if (category.children) {
+        this.assignProductsToCategories(products, category.children);
+      } else {
+        category.products = products.filter(p => p.categoryId === category.id);
+        // Populate innerProducts for demo kits
+        if (category.id === 1) { // Assuming categoryId 1 is for Demo Kits
+          category.products.forEach(demoKit => {
+            if (demoKit.innerProducts && demoKit.innerProducts.length > 0) {
+              demoKit.innerProducts = demoKit.innerProducts.map(innerProd => {
+                const fullProduct = products.find(p => p.stockCode === innerProd.stockCode);
+                return fullProduct || innerProd; // Return full product if found, else original partial
+              });
+            }
+          });
+        }
+      }
+    });
+  }
+
+  getProductsByCategory(categoryId: number | null): Observable<Product[]> {
+    return this.getProductsData().pipe(
+      map(products => {
+        if (categoryId === null) {
+          // If categoryId is null, return all products from all categories
+          const allProducts: Product[] = [];
+          const collectProducts = (cats: ProductCategory[]) => {
+            cats.forEach(cat => {
+              if (cat.products) {
+                allProducts.push(...cat.products);
+              }
+              if (cat.children) {
+                collectProducts(cat.children);
+              }
+            });
+          };
+          collectProducts(this.categories);
+          return allProducts;
+        }
+
+        let targetCategory: ProductCategory | undefined;
+        const findCategory = (cats: ProductCategory[], id: number) => {
+          for (const cat of cats) {
+            if (cat.id === id) {
+              targetCategory = cat;
+              return;
+            }
+      if (cat.children) {
+              findCategory(cat.children, id);
+              if (targetCategory) return;
+            }
+          }
+        };
+        findCategory(this.categories, categoryId);
+
+        if (targetCategory && targetCategory.children && targetCategory.children.length > 0) {
+          // If it's a parent category with children, collect products from all child categories
+          const childProducts: Product[] = [];
+          const collectChildProducts = (cats: ProductCategory[]) => {
+            cats.forEach(childCat => {
+              const filteredProducts = products.filter(p => p.categoryId === childCat.id);
+              childProducts.push(...filteredProducts);
+              if (childCat.children) {
+                collectChildProducts(childCat.children);
+              }
+            });
+          };
+          collectChildProducts(targetCategory.children);
+          return childProducts;
+        } else if (targetCategory) {
+          // If it's a leaf category, return its products
+          return products.filter(p => p.categoryId === categoryId);
+        } else {
+          return []; // Category not found
+        }
+      })
+    );
   }
   
   getProductById(id: number): Observable<Product | undefined> {
-    return of(this.products.find(product => product.id === id));
+    return this.getProductsData().pipe(
+      map(products => {
+        const product = products.find(p => p.id === id);
+        if (product && product.productType === ProductType.DemoKit && product.innerProducts && product.innerProducts.length > 0) {
+          product.innerProducts = product.innerProducts.map(innerProd => {
+            const fullProduct = products.find(p => p.stockCode === innerProd.stockCode);
+            return fullProduct || innerProd; // Ensure inner products are full product objects
+          });
+        }
+        return product;
+      })
+    );
   }
   
   getProductByStockCode(stockCode: string): Observable<Product | undefined> {
-    return of(this.products.find(product => product.stockCode === stockCode));
+    return this.getProductsData().pipe(
+      map(products => products.find(p => p.stockCode === stockCode))
+    );
   }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); // log to console instead
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
+
 }

@@ -1,23 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, map } from 'rxjs/operators';
 import { AsyncPipe, CommonModule, NgForOf, NgIf } from '@angular/common';
-import { Product, ProductCategory } from '../../models/product.model';
+import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { ProductCategory } from '../../models/product.category.model';
+import { FormsModule } from '@angular/forms';
+import { ProductFilterPipe } from '../../pipes/product-filter.pipe';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterLink, AsyncPipe, NgIf, NgForOf]
+  imports: [CommonModule, RouterLink, AsyncPipe, NgIf, NgForOf, FormsModule, ProductFilterPipe]
 })
 export class ProductListComponent implements OnInit {
   products$: Observable<Product[]> = of([]);
   categories$: Observable<ProductCategory[]>;
-  currentCategory: string = '';
+  currentCategoryId: number | null = null;
   parentCategory: ProductCategory | null = null;
+  searchQuery: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -27,28 +31,15 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products$ = this.route.paramMap.pipe(
+    this.route.paramMap.pipe(
       switchMap(params => {
-        const categorySlug = params.get('category') || '';
-        this.currentCategory = categorySlug;
-        
-        // Find parent category
-        this.categories$.subscribe(categories => {
-          this.parentCategory = null;
-          for (const category of categories) {
-            if (category.slug === categorySlug) {
-              break;
-            }
-            if (category.children && category.children.some(child => child.slug === categorySlug)) {
-              this.parentCategory = category;
-              break;
-            }
-          }
-        });
-        
-        return this.productService.getProductsByCategory(categorySlug);
-      })
-    );
+        const categoryId = params.get('id');
+        this.currentCategoryId = categoryId ? +categoryId : null;
+        return this.productService.getProductsByCategory(this.currentCategoryId);
+      }),
+    ).subscribe(products => {
+      this.products$ = of(products);
+    });
   }
 
   /**
@@ -61,7 +52,7 @@ export class ProductListComponent implements OnInit {
       return false;
     }
     
-    return this.currentCategory === category.slug || 
-           category.children.some(c => c.slug === this.currentCategory);
+    return this.currentCategoryId === category.id || 
+           category.children.some(c => c.id === this.currentCategoryId);
   }
 } 
