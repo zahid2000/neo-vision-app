@@ -29,27 +29,27 @@
             <ul class="list-unstyled link-list">
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="index.html" title="Ana Səhifə">Ana Səhifə</a>
+                <a [routerLink]="['/home']" (click)="scrollToTop()" title="Ana Səhifə">Ana Səhifə</a>
               </li>
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="kurumsal/index.html" title="Korporativ">Korporativ</a>
+                <a [routerLink]="['/about']" (click)="scrollToTop()" title="Korporativ">Korporativ</a>
               </li>
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="kategoriler/index.html" title="Məhsullar">Məhsullar</a>
+                <a [routerLink]="['/products/category/1']" (click)="scrollToTop()" title="Məhsullar">Məhsullar</a>
               </li>
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="haberler/index.html" title="Xəbərlər">Xəbərlər</a>
+                <a [routerLink]="['/how-it-works']" (click)="scrollToTop()" title="Necə İşləyir">Necə İşləyir</a>
               </li>
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="galeri/index.html" title="Qalereya">Qalereya</a>
+                <a [routerLink]="['/galery']" (click)="scrollToTop()" title="Qalereya">Qalereya</a>
               </li>
               <li>
                 <i class="fas fa-caret-right"></i>
-                <a href="iletisim/index.html" title="Əlaqə">Əlaqə</a>
+                <a [routerLink]="['/contact']" (click)="scrollToTop()" title="Əlaqə">Əlaqə</a>
               </li>
             </ul>
           </div>
@@ -61,7 +61,8 @@
               <li>
                 <div class="overflow-h">
                   <a
-                    href="haberler/rf-paperdan-saglik-sektorune-ozel-cozum-hastanelerde-elektronik-etiket-devri.html"
+                    [routerLink]="['/news/1']"
+                    (click)="scrollToTop()"
                     title="RF Paper'dan Səhiyyə Sektoruna Xüsusi Həll: Xəstəxanalarda Elektronik Etiket Dövrü"
                     >RF Paper'dan Səhiyyə Sektoruna Xüsusi Həll: Xəstəxanalarda
                     Elektronik Etiket Dövrü</a
@@ -72,7 +73,8 @@
               <li>
                 <div class="overflow-h">
                   <a
-                    href="haberler/rf-paper-ile-musteri-deneyimini-yeniden-tanimlayin-gercek-zamanli-fiyat-ve-urun-bilgisi.html"
+                    [routerLink]="['/news/2']"
+                    (click)="scrollToTop()"
                     title="RF Paper ilə Müştəri Təcrübəsini Yenidən Müəyyənləşdirin: Real Zamanlı Qiymət və Məhsul Məlumatı"
                     >RF Paper ilə Müştəri Təcrübəsini Yenidən Müəyyənləşdirin: Real
                     Zamanlı Qiymət və Məhsul Məlumatı</a
@@ -157,9 +159,10 @@
   </div>
   <a
     id="back-to-top"
-    class="btn btn-sm btn-green btn-back-to-top smooth-scrolls hidden-sm hidden-xs"
+    class="btn btn-sm btn-green btn-rounded rounded-5 btn-back-to-top smooth-scrolls hidden-sm hidden-xs"
     title="home"
     role="button"
+    appBackToTop
   >
     <i class="fas fa-angle-up"></i>
   </a>

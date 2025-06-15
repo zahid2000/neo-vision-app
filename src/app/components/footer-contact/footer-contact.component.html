@@ -2,32 +2,49 @@
 		<div class="container">
 			<div class="contact-h-cont">
 				<h3 class="cl-white text-center" style="text-transform: capitalize;">Sizə Zəng Edək</h3><br>
-				<form class="row" name="form-contact" id="form-contact" method="POST" action="https://rf-paper.com/tr/iletisim/">
+				<form class="row" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 					<div class="col-md-6 form-group cl-white">
 						<label for="namesurname">Ad Soyad</label>
-						<input type="text" class="form-control" id="namesurname" name="namesurname" aria-describedby="name" placeholder="Ad Soyad">
+						<input type="text" class="form-control" id="namesurname" formControlName="namesurname" placeholder="Ad Soyad">
+						<div *ngIf="contactForm.get('namesurname')?.invalid && contactForm.get('namesurname')?.touched" class="text-danger">
+							Ad Soyad tələb olunur
+						</div>
 					</div>
 					<div class="col-md-6 form-group cl-white">
 						<label for="email">E-Poçt Ünvanı</label>
-						<input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="E-Poçt Ünvanı">
+						<input type="email" class="form-control" id="email" formControlName="email" placeholder="E-Poçt Ünvanı">
+						<div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+							Düzgün e-poçt ünvanı daxil edin
+						</div>
 					</div>
 					<div class="col-md-6 form-group cl-white">
 						<label for="phone">Telefon</label>
-						<input type="text" class="form-control" id="phone" name="phone" aria-describedby="text" placeholder="Telefon">
+						<input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Telefon">
+						<div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="text-danger">
+							Telefon tələb olunur
+						</div>
 					</div>
 					<div class="col-md-6 form-group cl-white">
 						<label for="subject">Mövzu</label>
-						<input type="text" class="form-control" id="subject" name="subject" aria-describedby="subject" placeholder="Mövzu">
+						<input type="text" class="form-control" id="subject" formControlName="subject" placeholder="Mövzu">
+						<div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
+							Mövzu tələb olunur
+						</div>
 					</div>
 					<div class="col-md-12 form-group cl-white">
 						<label for="message">Mesaj</label>
-						<textarea class="form-control" id="message" name="message" rows="3"></textarea>
+						<textarea class="form-control" id="message" formControlName="message" rows="3"></textarea>
+						<div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+							Mesaj tələb olunur
+						</div>
 					</div>
-					<div class="col-md-12 form-group loading-form">Form göndərilir, zəhmət olmasa gözləyin...</div>
-					<div class="col-md-12 form-group error-message" data-msg="Zəhmət olmasa formu tam doldurun."></div>
-					<div class="col-md-12 form-group sent-message"></div>
+					<div *ngIf="isLoading" class="col-md-12 form-group loading-form">Form göndərilir, zəhmət olmasa gözləyin...</div>
+					<div *ngIf="errorMessage" class="col-md-12 form-group error-message text-danger">{{ errorMessage }}</div>
+					<div *ngIf="successMessage" class="col-md-12 form-group sent-message text-success">{{ successMessage }}</div>
 					<div class="col-md-12 form-group cl-white">
-						<button type="submit" class="btn btn-general btn-white btn-block" role="button"><i fas fa-right-arrow></i>Göndər</button>
+						<button type="submit" class="btn btn-general btn-white btn-block" [disabled]="contactForm.invalid || isLoading">
+							<i class="fas fa-paper-plane"></i> Göndər
+						</button>
 					</div>
 				</form>
 			</div>
