@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "fix-404": "node fix-404.js",
-    "deploy": "ng build --configuration production --base-href=/neo-vision-app/ && npm run fix-404 && npx angular-cli-ghpages --dir=dist/neo-vision-app/browser --no-silent"
+    "deploy": "ng build --configuration production --base-href=./ && npm run fix-404 && npx angular-cli-ghpages --dir=dist/neo-vision-app/browser --no-silent"
   },
   "private": true,
   "dependencies": {
