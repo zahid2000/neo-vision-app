@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const distFolder = path.join(__dirname, 'dist', 'neo-vision-app');
-const indexPath = path.join(distFolder, 'browser', 'index.html');
-const notFoundPath = path.join(distFolder, 'browser', '404.html');
+const distFolder = path.join(__dirname, 'dist', 'neo-vision-app', 'browser');
+const indexPath = path.join(distFolder, 'index.html');
+const notFoundPath = path.join(distFolder, '404.html');
 
 // Check if index.html exists
 if (fs.existsSync(indexPath)) {

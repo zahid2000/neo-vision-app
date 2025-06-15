@@ -5,6 +5,9 @@ on:
     branches:
       - for-git-pages # using the current branch name
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,5 +30,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/neo-vision-app
+          folder: dist/neo-vision-app/browser
           branch: gh-pages 
