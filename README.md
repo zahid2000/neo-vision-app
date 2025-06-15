@@ -54,6 +54,26 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Deploying to GitHub Pages
+
+To deploy the application to GitHub Pages, you can use one of the following methods:
+
+### Method 1: Manual Deployment
+
+Run the deploy script:
+
+```bash
+npm run deploy
+```
+
+This will build the application with the correct base-href and deploy it to the gh-pages branch.
+
+### Method 2: Automated Deployment
+
+The repository is configured with GitHub Actions to automatically deploy to GitHub Pages whenever changes are pushed to the `for-git-pages` branch.
+
+After deployment, your application will be available at: `https://[your-github-username].github.io/neo-vision-app/`
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
