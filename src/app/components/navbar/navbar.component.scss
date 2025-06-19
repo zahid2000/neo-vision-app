@@ -64,3 +64,43 @@
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
+
+.contact-options-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.contact-options-content {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  min-width: 260px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+  text-align: center;
+  position: relative;
+}
+
+.close-x-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #e53935;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.2em 0.5em;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.close-x-btn:hover {
+  background: #ffeaea;
+}

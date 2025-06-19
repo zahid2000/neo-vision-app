@@ -1,68 +1,107 @@
 <header>
-    <div class="top-menubar">
-        <div class="topmenu">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <ul class="list-inline top-contacts">
-                            <li class="d-none d-sm-inline-block">
-                                <i class="fas fa-envelope"></i> <a href="mailto:info@rf-paper.com"
-                                    title="info@rf-paper.com">info&#64;neo-vision.com</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i> <a href="tel:+994 51 696 91 85">+994 51 696 91 85</a>
-                            </li>
-                          
-                            <li class="d-none d-lg-inline-block">
-                                <i class="fab fa-whatsapp"></i> <a target="_blank"
-                                    href="https://wa.me/+994516969185">+994 51 696 91 85</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i> <a href="tel:+994 70 569 63 73">+994 70 569 63 73</a>
-                            </li>
-                            <li class="d-none d-lg-inline-block">
-                                <i class="fab fa-whatsapp"></i> <a target="_blank"
-                                    href="https://wa.me/+994705696373">+994 70 569 63 73</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0 d-none d-md-flex ms-auto align-items-center">
-                        <ul class="list-inline top-data mb-0 me-2 d-flex align-items-center">
-                            <li><a target="_blank" href="https://www.facebook.com/rfpaperesl" rel="nofollow"><i
-                                        class="top-social fab fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/rfpaperesl" rel="nofollow"><i
-                                        class="top-social fab fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/rfpaperesl/" rel="nofollow"><i
-                                        class="top-social fab fa-instagram"></i></a></li>
-                            <li><a target="_blank" href="https://www.youtube.com/@RFPaper" rel="nofollow"><i
+  <div class="top-menubar">
+    <div class="topmenu">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <ul class="list-inline top-contacts">
+              <li class="d-none d-sm-inline-block">
+                <a href="mailto:info@rf-paper.com" title="info@rf-paper.com">
+                  <i class="fas fa-envelope"></i>
+                  info&#64;neo-vision.com
+                </a>
+              </li>
+              <li>
+                <button
+                 class="border-0"
+                 style="color: #666;"
+                  (click)="openContactOptions('+994516969185', $event)"
+                >
+                  <i class="fas fa-phone"></i>
+                  <i class="fab fa-whatsapp"></i>
+                  +994 51 696 91 85
+                </button>
+              </li>
+              <li>
+                <button
+                class="border-0"
+                style="color: #666;"
+                  (click)="openContactOptions('+994705696373', $event)"
+                >
+                  <i class="fas fa-phone"></i>
+                  <i class="fab fa-whatsapp"></i>
+                  +994 70 569 63 73
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex-shrink-0 d-none d-md-flex ms-auto align-items-center"
+          >
+            <ul
+              class="list-inline top-data mb-0 me-2 d-flex align-items-center"
+            >
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/share/18a9UJBTXd/"
+                  rel="nofollow"
+                  ><i class="top-social fab fa-facebook"></i
+                ></a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/neo_vision.az?igsh=cnpweHM0OHd3MGk3"
+                  rel="nofollow"
+                  ><i class="top-social fab fa-instagram"></i
+                ></a>
+              </li>
+              <!-- <li><a target="_blank" href="https://www.youtube.com/@RFPaper" rel="nofollow"><i
                                         class="top-social fab fa-youtube"></i></a></li>
                             <li><a target="_blank" href="https://www.linkedin.com/company/rfpaperesl" rel="nofollow"><i
-                                        class="top-social fab fa-linkedin"></i></a></li>
-                        </ul>
-                        <a href="https://rf-paper.com/en/" class="log-top d-flex align-items-center ms-2"
-                            title="EN"><i class="flag-icon flag-icon-en"></i></a>
-                    </div>
-                </div>
-            </div>
+                                        class="top-social fab fa-linkedin"></i></a></li> -->
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-between" id="mainNav" data-toggle="affix">
-        <div class="container d-flex flex-row justify-content-between align-items-center">
-            <a class="navbar-brand smooth-scroll me-auto" routerLink="/">
-                <img src="files/logo.png" alt="RF Paper - Elektronik Raf Etiketi">
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button"
-                (click)="isNavbarCollapsed = !isNavbarCollapsed" [attr.aria-expanded]="!isNavbarCollapsed"
-                aria-controls="navbarResponsive" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div [@collapse]="isMobile ? (isNavbarCollapsed ? 'closed' : 'open') : 'open'" class="navbar-collapse flex-shrink-0 ms-auto"
-                id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link smooth-scroll" routerLink="about">ŞİRKƏT</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
+  <nav
+    class="navbar navbar-expand-lg navbar-light justify-content-between"
+    id="mainNav"
+    data-toggle="affix"
+  >
+    <div
+      class="container d-flex flex-row justify-content-between align-items-center"
+    >
+      <a class="navbar-brand smooth-scroll me-auto" routerLink="/">
+        <img src="files/logo.png" alt="RF Paper - Elektronik Raf Etiketi" />
+      </a>
+      <button
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed"
+        [attr.aria-expanded]="!isNavbarCollapsed"
+        aria-controls="navbarResponsive"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        [@collapse]="
+          isMobile ? (isNavbarCollapsed ? 'closed' : 'open') : 'open'
+        "
+        class="navbar-collapse flex-shrink-0 ms-auto"
+        id="navbarResponsive"
+      >
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link smooth-scroll" routerLink="about">ŞİRKƏT</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-2"
                             aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">ŞİRKƏT</a>
                         <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-2">
@@ -72,52 +111,120 @@
                             <a class="dropdown-item" href="kurumsal/mesafeli-satis-sozlesmesi.html"><span>Mesafeli Satış Sözleşmesi</span></a> 
                         </div>
                     </li> -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-3"
-                            aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">MƏHSULLAR</a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-3">
-                            <ng-container *ngFor="let category of categories">
-                                <!-- Main categories -->
-                                <ng-container *ngIf="!category.children || category.children.length === 0">
-                                    <a class="dropdown-item" [routerLink]="['/products/category', category.id]">
-                                        <span>{{ category.name }}</span>
-                                    </a>
-                                </ng-container>
-                                
-                                <!-- Categories with subcategories -->
-                                <ng-container *ngIf="category.children && category.children.length > 0">
-                                    <div class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" [routerLink]="['/products/category', category.id]">
-                                            <span>{{ category.name }}</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a *ngFor="let subCategory of category.children" 
-                                               class="dropdown-item" 
-                                               [routerLink]="['/products/category', subCategory.id]">
-                                                <span>{{ subCategory.name }}</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </ng-container>
-                            </ng-container>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link smooth-scroll" routerLink="how-it-works">Necə Çalışır?</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-10"
-                            aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Media</a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-10">
-                            <!-- <a class="dropdown-item" href="haberler/index.html"><span>Xəbərlər</span></a> -->
-                            <a class="dropdown-item" routerLink="galery"><span>Galareya</span></a>
-                            <a class="dropdown-item" routerLink="download-center"><span>Katalog</span></a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link smooth-scroll" routerLink="references">Referanslar</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link smooth-scroll" routerLink="contact">ƏLAQƏ</a></li>
-                </ul>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle smooth-scroll"
+              data-toggle="dropdown"
+              id="ndlink-3"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="cursor: pointer"
+              >MƏHSULLAR</a
+            >
+            <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-3">
+              <ng-container *ngFor="let category of categories">
+                <!-- Main categories -->
+                <ng-container
+                  *ngIf="!category.children || category.children.length === 0"
+                >
+                  <a
+                    class="dropdown-item"
+                    [routerLink]="['/products/category', category.id]"
+                  >
+                    <span>{{ category.name }}</span>
+                  </a>
+                </ng-container>
+
+                <!-- Categories with subcategories -->
+                <ng-container
+                  *ngIf="category.children && category.children.length > 0"
+                >
+                  <div class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      [routerLink]="['/products/category', category.id]"
+                    >
+                      <span>{{ category.name }}</span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a
+                        *ngFor="let subCategory of category.children"
+                        class="dropdown-item"
+                        [routerLink]="['/products/category', subCategory.id]"
+                      >
+                        <span>{{ subCategory.name }}</span>
+                      </a>
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-container>
             </div>
-        </div>
-    </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-scroll" routerLink="how-it-works"
+              >Necə Çalışır?</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle smooth-scroll"
+              data-toggle="dropdown"
+              id="ndlink-10"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="cursor: pointer"
+              >Media</a
+            >
+            <div
+              class="dropdown-menu dropdown-cust"
+              aria-labelledby="ndlink-10"
+            >
+              <!-- <a class="dropdown-item" href="haberler/index.html"><span>Xəbərlər</span></a> -->
+              <a class="dropdown-item" routerLink="galery"
+                ><span>Galareya</span></a
+              >
+              <a class="dropdown-item" routerLink="download-center"
+                ><span>Katalog</span></a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-scroll" routerLink="references"
+              >Referanslar</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smooth-scroll" routerLink="contact">ƏLAQƏ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<!-- Modal/Popup for contact options -->
+<div
+  *ngIf="showContactOptions"
+  class="contact-options-modal"
+  (click)="closeContactOptions()"
+>
+  <div class="contact-options-content" (click)="$event.stopPropagation()">
+    <button
+      class="close-x-btn"
+      (click)="closeContactOptions()"
+      aria-label="Bağla"
+    >
+      <i class="fas fa-times"></i>
+    </button>
+    <p>Seçim edin:</p>
+    <button
+      class="btn btn-success w-100 mb-2"
+      (click)="goToWhatsApp(selectedPhone)"
+    >
+      <i class="fab fa-whatsapp"></i> WhatsApp ilə yaz
+    </button>
+    <button class="btn btn-primary w-100" (click)="callPhone(selectedPhone)">
+      <i class="fas fa-phone"></i> Zəng et
+    </button>
+  </div>
+</div>

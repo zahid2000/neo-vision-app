@@ -4,6 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { ProductCategory } from '../../models/product.category.model';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-navbar',
@@ -26,15 +27,21 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   isMobile = window.innerWidth <= 992;
   categories: ProductCategory[] = [];
   
+  showContactOptions = false;
+  selectedPhone: string | null = null;
+
   constructor(
     private productService: ProductService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    public contactService: ContactService
   ) {}
 
   ngOnInit(): void {
     this.productService.getCategories().subscribe(categories => {
       this.categories = categories;
     });
+    this.contactService.showContactOptions$.subscribe(val => this.showContactOptions = val);
+    this.contactService.selectedPhone$.subscribe(val => this.selectedPhone = val);
   }
 
   ngAfterViewInit(): void {
@@ -131,5 +138,21 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 992;
+  }
+
+  openContactOptions(phone: string, event: Event) {
+    this.contactService.openContactOptions(phone, event);
+  }
+
+  closeContactOptions() {
+    this.contactService.closeContactOptions();
+  }
+
+  goToWhatsApp(phone: string | null) {
+    this.contactService.goToWhatsApp(phone);
+  }
+
+  callPhone(phone: string | null) {
+    this.contactService.callPhone(phone);
   }
 }
