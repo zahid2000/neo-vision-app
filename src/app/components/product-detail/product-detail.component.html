@@ -47,6 +47,15 @@
             <div *ngIf="!product.description || product.description.length === 0">
               <p>Bu məhsul üçün açıqlama tapılmadı.</p>
             </div>
+            
+            <!-- Description Images -->
+            <div class="description-images mt-3" *ngIf="product.descriptionImages && product.descriptionImages.length > 0">
+              <div class="row">
+                <div class="col-md-6 mb-3" *ngFor="let imgPath of product.descriptionImages">
+                  <img [src]="imgPath" class="img-fluid rounded" alt="Description Image">
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="demo-kit-contents mt-4" *ngIf="product.innerProducts && product.innerProducts.length > 0">

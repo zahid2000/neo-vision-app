@@ -11,6 +11,7 @@ export interface Product {
   id: number;
   name: string;
   description: string[] | null;
+  descriptionImages?: string[] | null;
   stockCode: string;
   size?: string | null;
   weight?: string | null;

@@ -2,10 +2,10 @@
   {
     "id": 1,
     "name": "ESL DEMO DƏST TAM",
-    "stockCode": "RFD01.0001",
+    "stockCode": "DK01.0001",
     "description": ["Demo Dəst Tam təsviri"],
     "productType": "DemoKit",
-    "imagePath": "files/urunler/RFD01.0001.png",
+    "imagePath": "files/demo_kits/DK01.0001.jpg",
     "categoryId": 1,
     "innerProducts": [
       {"id": 3, "quantity": 1},
@@ -13,36 +13,49 @@
       {"id": 5, "quantity": 1},
       {"id": 6, "quantity": 1},
       {"id": 9, "quantity": 1},
-      {"id": 10, "quantity": 1}
+      {"id": 10, "quantity": 1},
+      {"id": 11, "quantity": 1},
+      {"id": 15, "quantity": 1},
+      {"id": 16, "quantity": 1},
+      {"id": 17, "quantity": 1},
+      {"id": 18, "quantity": 1},
+      {"id": 42, "quantity": 1},
+      {"id": 44, "quantity": 1}
     ]
   },
   {
     "id": 2,
     "name": "ESL DEMO DƏST PLUS",
-    "stockCode": "RFD01.0002",
+    "stockCode": "DK02.0002",
     "description": ["Demo Dəst Plus təsviri"],
     "productType": "DemoKit",
-    "imagePath": "files/urunler/RFD01.0001.png",
+    "imagePath": "files/demo_kits/DK02.0002.jpg",
     "categoryId": 1,
     "innerProducts": [
       {"id": 3, "quantity": 1},
       {"id": 4, "quantity": 1},
+      {"id": 5, "quantity": 2},
+      {"id": 6, "quantity": 2},
       {"id": 9, "quantity": 1},
-      {"id": 10, "quantity": 1}
+      {"id": 10, "quantity": 1},
+      {"id": 11, "quantity": 1},
+      {"id": 15, "quantity": 1},
+      {"id": 42, "quantity": 1}
     ]
   },
   {
     "id": 3,
-    "name": "1.54\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.0154",
-    "description": ["1.54\" Elektronik Raf Etiketi təsviri"],
+    "name": "1.54\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0154",
+    "description": ["1.54\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.0154.png",
+    "imagePath": "files/zkong_labels/Valley/1.54V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "100x60x5 mm",
-      "weight": "50q",
-      "operatingTemperature": "-10°C to +50°C",
+      "dimensions": "44.2x35.9x12.1 mm",
+      "weight": "20q",
+      "operatingTemperature": "0°C to +40°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
       "batteryType": "CR2450",
@@ -65,23 +78,64 @@
         "1.54\" E-paper ekran",
         "200x200 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
   {
     "id": 4,
-    "name": "2.13\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.0213",
-    "description": ["2.13\" Elektronik Raf Etiketi təsviri"],
+    "name": "1.8\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0180",
+    "description": ["1.80\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.0213.png",
+    "imagePath": "files/zkong_labels/Valley/1.8V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "120x80x5 mm",
-      "weight": "70q",
-      "operatingTemperature": "-10°C to +50°C",
+      "dimensions": "52.5x35.9x12.1 mm",
+      "weight": "22q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.05W",
+      "displayType": "E-paper",
+      "displaySize": "1.8\"",
+      "resolution": "214x214",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "1.8\" E-paper ekran",
+        "200x200 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+  {
+    "id": 5,
+    "name": "2.13\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0213",
+    "description": ["2.13\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/2.13V.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "70x34.5x12.1 mm",
+      "weight": "25q",
+      "operatingTemperature": "0°C to +40°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
       "batteryType": "CR2450",
@@ -104,22 +158,63 @@
         "2.13\" E-paper ekran",
         "212x104 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
   {
-    "id": 5,
-    "name": "2.9\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.0290",
-    "description": ["2.9\" Elektronik Raf Etiketi təsviri"],
+    "id": 6,
+    "name": "2.66\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0260",
+    "description": ["2.66\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.0290.png",
+    "imagePath": "files/zkong_labels/Valley/2.66V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "150x100x5 mm",
-      "weight": "100q",
+      "dimensions": "83x41x12.1 mm",
+      "weight": "28q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.05W",
+      "displayType": "E-paper",
+      "displaySize": "2.66\"",
+      "resolution": "226x254",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.66\" E-paper ekran",
+        "200x200 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+  {
+    "id": 7,
+    "name": "2.9\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0290",
+    "description": ["2.9\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/2.9V.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "90x41x12.1 mm",
+      "weight": "38q",
       "operatingTemperature": "-10°C to +50°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
@@ -128,7 +223,7 @@
       "powerConsumption": "< 0.07W",
       "displayType": "E-paper",
       "displaySize": "2.9\"",
-      "resolution": "296x128",
+      "resolution": "296x182",
       "viewingAngle": "180°",
       "refreshRate": "2 saniyə",
       "communicationProtocol": "2.4GHz RF",
@@ -143,23 +238,65 @@
         "2.9\" E-paper ekran",
         "296x128 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
-  {
-    "id": 6,
-    "name": "4.2\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.0420",
-    "description": ["4.2\" Elektronik Raf Etiketi təsviri"],
+{
+    "id": 8,
+    "name": "3.7\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0370",
+    "description": ["3.7\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.0420.png",
+    "imagePath": "files/zkong_labels/Valley/3.7V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "200x150x5 mm",
-      "weight": "150q",
-      "operatingTemperature": "-10°C to +50°C",
+      "dimensions": "103.6x57x11.2 mm",
+      "weight": "52q",
+      "operatingTemperature": "0°C to 40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.07W",
+      "displayType": "E-paper",
+      "displaySize": "3.7\"",
+      "resolution": "296x224",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "3.7\" E-paper ekran",
+        "296x224 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+  {
+    "id": 9,
+    "name": "4.2\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0420",
+    "description": ["4.2\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/4.2V.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "104.8x87x12.8 mm",
+      "weight": "76q",
+      "operatingTemperature": "0°C to +40°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
       "batteryType": "CR2450",
@@ -182,23 +319,64 @@
         "4.2\" E-paper ekran",
         "400x300 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
   {
-    "id": 7,
-    "name": "7.5\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.0750",
-    "description": ["7.5\" Elektronik Raf Etiketi təsviri"],
+    "id": 10,
+    "name": "5.8\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0580",
+    "description": ["5.8\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.0750.png",
+    "imagePath": "files/zkong_labels/Valley/5.8V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "250x200x5 mm",
-      "weight": "200q",
-      "operatingTemperature": "-10°C to +50°C",
+      "dimensions": "135.4x110x9 mm",
+      "weight": "85q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.08W",
+      "displayType": "E-paper",
+      "displaySize": "5.8\"",
+      "resolution": "418x336",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "5.8\" E-paper ekran",
+        "418x336 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+  {
+    "id": 11,
+    "name": "7.5\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0750",
+    "description": ["7.5\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/7.5DE.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "180.8x121.8x9 mm",
+      "weight": "92q",
+      "operatingTemperature": "0°C to +40°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
       "batteryType": "CR2450",
@@ -206,7 +384,7 @@
       "powerConsumption": "< 0.09W",
       "displayType": "E-paper",
       "displaySize": "7.5\"",
-      "resolution": "800x480",
+      "resolution": "556x478",
       "viewingAngle": "180°",
       "refreshRate": "2 saniyə",
       "communicationProtocol": "2.4GHz RF",
@@ -219,25 +397,68 @@
       ],
       "specifications": [
         "7.5\" E-paper ekran",
-        "800x480 təsvir qabiliyyəti",
+        "556x478 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
-  {
-    "id": 8,
-    "name": "11.6\" ELEKTRONİK RAF ETİKETİ",
-    "stockCode": "RFE01.1160",
-    "description": ["11.6\" Elektronik Raf Etiketi təsviri"],
+
+   {
+    "id": 12,
+    "name": "10.2\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.0102",
+    "description": ["10.2\"Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
-    "imagePath": "files/urunler/RFE01.1250.png",
+    "imagePath": "files/zkong_labels/Valley/10.2V.jpg",
     "categoryId": 2,
     "technicalData": {
-      "dimensions": "300x250x5 mm",
-      "weight": "300q",
-      "operatingTemperature": "-10°C to +50°C",
+      "dimensions": "215.5x173x9.5 mm",
+      "weight": "122q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.09W",
+      "displayType": "E-paper",
+      "displaySize": "10.2\"",
+      "resolution": "788x640",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "10.2\" E-paper ekran",
+        "788x640 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+  {
+    "id": 13,
+    "name": "11.6\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.1160",
+    "description": ["11.6\" Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/11.6V.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "266.3x190x9 mm",
+      "weight": "252q",
+      "operatingTemperature": "0°C to +40°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
       "batteryType": "CR2450",
@@ -260,22 +481,1385 @@
         "11.6\" E-paper ekran",
         "1280x720 təsvir qabiliyyəti",
         "5 illik batareya ömrü",
-        "IP54 qorunma"
+        "IP67 qorunma"
       ],
       "warranty": "2 il"
     }
   },
+
   {
-    "id": 9,
-    "name": "AP 2.4 GHZ GİRİŞ NÖQTƏSİ",
-    "stockCode": "RFG01.0001",
-    "description": ["AP 2.4 GHz Giriş Nöqtəsi təsviri"],
+    "id": 14,
+    "name": "13.3\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK01.1330",
+    "description": ["13.3\" Valley Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Valley/13.3V.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "298.3x225.5x10.3 mm",
+      "weight": "265q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "13.3\"",
+      "resolution": "1440x920",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "13.3\" E-paper ekran",
+        "1440x920 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+  
+
+
+
+
+ {
+    "id": 15,
+    "name": "1.8\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0180",
+    "description": ["1.8\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/1.8B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "54.2x36.9x9.5 mm",
+      "weight": "42q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "1.8\"",
+      "resolution": "200x144",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "1.8\" E-paper ekran",
+        "200x144 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+  {
+    "id": 16,
+    "name": "2.13\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0213",
+    "description": ["2.13\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/2.13B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "65x37x9.5 mm",
+      "weight": "45q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "2.13\"",
+      "resolution": "220x144",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.13\" E-paper ekran",
+        "220x144 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+{
+    "id": 17,
+    "name": "2.2\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0220",
+    "description": ["2.2\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/2.2B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "67.9x37x10 mm",
+      "weight": "48q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "2.2\"",
+      "resolution": "220x144",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.2\" E-paper ekran",
+        "220x144 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+{
+    "id": 18,
+    "name": "2.66\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0266",
+    "description": ["2.66\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/2.66UB.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "84.2x40.5x7.5 mm",
+      "weight": "52q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "2.66\"",
+      "resolution": "240x152",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.66\" E-paper ekran",
+        "240x152 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+ {
+    "id": 19,
+    "name": "2.9\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0290",
+    "description": ["2.9\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/2.9B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "92x41.5x7.5 mm",
+      "weight": "61q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "2.9\"",
+      "resolution": "260x144",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.9\" E-paper ekran",
+        "260x144 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+{
+    "id": 20,
+    "name": "3.5\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0350",
+    "description": ["3.5\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/3.5B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "101.5x55x11.5 mm",
+      "weight": "67q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "3.5\"",
+      "resolution": "260x144",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "3.5\" E-paper ekran",
+        "260x144 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+{
+    "id": 21,
+    "name": "4.2\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0420",
+    "description": ["4.2\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/4.2B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "103.5x87x10.5 mm",
+      "weight": "75q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "4.2\"",
+      "resolution": "560x420",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "4.2\" E-paper ekran",
+        "560x420 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+{
+    "id": 22,
+    "name": "4.3\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0430",
+    "description": ["4.3\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/4.3B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "129.7x41.3x9 mm",
+      "weight": "67q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "4.3\"",
+      "resolution": "220x118",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "4.3\" E-paper ekran",
+        "220x118 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+  {
+    "id": 23,
+    "name": "5.8\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0580",
+    "description": ["5.8\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/5.8B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "132x109x13 mm",
+      "weight": "82q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "5.8\"",
+      "resolution": "620x540",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "5.8\" E-paper ekran",
+        "620x540 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+  {
+    "id": 24,
+    "name": "7.5\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZK02.0750",
+    "description": ["7.5\"Blade Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Blade/7.5B.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "176x123x13 mm",
+      "weight": "115q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "7.5\"",
+      "resolution": "720x640",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "7.5\" E-paper ekran",
+        "720x640 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+
+
+
+{
+    "id": 25,
+    "name": "1.54\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0154",
+    "description": ["1.54\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/1.54.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "44.2x35.9x12.1 mm",
+      "weight": "20q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.05W",
+      "displayType": "E-paper",
+      "displaySize": "1.54\"",
+      "resolution": "200x200",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "1.54\" E-paper ekran",
+        "200x200 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+  
+  
+  {
+    "id": 26,
+    "name": "2.13\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0213",
+    "description": ["2.13\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/2.13.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "70x34.5x12.1 mm",
+      "weight": "25q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.06W",
+      "displayType": "E-paper",
+      "displaySize": "2.13\"",
+      "resolution": "212x104",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.13\" E-paper ekran",
+        "212x104 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+{
+    "id": 27,
+    "name": "2.66\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0260",
+    "description": ["2.66\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/2.6.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "83x41x12.1 mm",
+      "weight": "28q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.05W",
+      "displayType": "E-paper",
+      "displaySize": "2.66\"",
+      "resolution": "226x254",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.66\" E-paper ekran",
+        "226x254 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+{
+    "id": 28,
+    "name": "2.7\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0270",
+    "description": ["2.7\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/2.7.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "85x43x12.1 mm",
+      "weight": "30q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.05W",
+      "displayType": "E-paper",
+      "displaySize": "2.7\"",
+      "resolution": "230x180",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.7\" E-paper ekran",
+        "230x180 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+{
+    "id": 29,
+    "name": "2.9\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0290",
+    "description": ["2.9\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/2.9.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "90x41x12.1 mm",
+      "weight": "38q",
+      "operatingTemperature": "-10°C to +50°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.07W",
+      "displayType": "E-paper",
+      "displaySize": "2.9\"",
+      "resolution": "296x182",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.9\" E-paper ekran",
+        "296x128 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+{
+    "id": 30,
+    "name": "3.7\" ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKS01.0370",
+    "description": ["3.7\"Shield Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Shield/3.7.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "103.6x57x11.2 mm",
+      "weight": "52q",
+      "operatingTemperature": "0°C to 40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.07W",
+      "displayType": "E-paper",
+      "displaySize": "3.7\"",
+      "resolution": "296x224",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "3.7\" E-paper ekran",
+        "296x224 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+
+{
+    "id": 31,
+    "name": "5.8\" ESSENCE COLORFUL ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKCLR02.0580",
+    "description": ["5.8\"Essence Colorful Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Essence Colorful/5.8FCOLOR.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "132x109x13 mm",
+      "weight": "82q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "5.8\"",
+      "resolution": "620x540",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "5.8\" E-paper ekran",
+        "620x540 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+{
+    "id": 32,
+    "name": "7.3\" ESSENCE COLORFUL ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKCLR02.0730",
+    "description": ["7.3\"Essence Colorful Seriyası Elektronik Rəf Etiketi təsviri"],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Essence Colorful/7.3FCOLOR.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "176x123x13 mm",
+      "weight": "115q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "7.3\"",
+      "resolution": "720x640",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "7.3\" E-paper ekran",
+        "720x640 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+  
+{
+    "id": 33,
+    "name": "8.2\" ESSENCE COLORFUL ELEKTRONİK RƏF ETİKETİ",
+    "stockCode": "ZKCLR02.0820",
+    "description": [
+      "8.2\"Essence Colorful Seriyası Elektronik Rəf Etiketi təsviri",
+      "Dot Matrix Rəngli Display"
+       ],
+    "descriptionImages":["files/NFC.png"],
+    "productType": "ESL",
+    "imagePath": "files/zkong_labels/Essence Colorful/8.2.jpg",
+    "categoryId": 2,
+    "technicalData": {
+      "dimensions": "200x137x11 mm",
+      "weight": "140q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "CR2450",
+      "batteryLife": "5 il",
+      "powerConsumption": "< 0.1W",
+      "displayType": "E-paper",
+      "displaySize": "8.2\"",
+      "resolution": "840x640",
+      "viewingAngle": "180°",
+      "refreshRate": "2 saniyə",
+      "communicationProtocol": "2.4GHz RF",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "8.2\" E-paper ekran",
+        "840x640 təsvir qabiliyyəti",
+        "5 illik batareya ömrü",
+        "IP67 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+  {
+    "id": 34,
+    "name": "2.4\" SPARKLE LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKLCD01.0240",
+    "description": [
+      "2.4\"Sparkle Seriyası LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Sparkle LCD/ZKS24.webp",
+    "categoryId": 15,
+    "technicalData": {
+      "dimensions": "71.2x47.9x10.7 mm",
+      "weight": "428q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.1W",
+      "displayType": "LCD",
+      "displaySize": "2.4\"",
+      "resolution": "320x240",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "2.4\" LCD ekran",
+        "320x240 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+   {
+    "id": 35,
+    "name": "7\" SPARKLE LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKLCD01.0700",
+    "description": [
+      "7\"Sparkle Seriyası LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Sparkle LCD/ZKS70.webp",
+    "categoryId": 15,
+    "technicalData": {
+      "dimensions": "177.1x114.1x15 mm",
+      "weight": "600q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "7\"",
+      "resolution": "1024x600",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "7\" LCD ekran",
+        "1024x600 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+  {
+    "id": 35,
+    "name": "8\" SPARKLE LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKLCD01.0800",
+    "description": [
+      "8\"Sparkle Seriyası LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Sparkle LCD/ZKS80.webp",
+    "categoryId": 15,
+    "technicalData": {
+      "dimensions": "198.8x124x14 mm",
+      "weight": "672q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "8\"",
+      "resolution": "1280x800",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "8\" LCD ekran",
+        "1280x800 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+  {
+    "id": 36,
+    "name": "10.1\" SPARKLE LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKLCD01.0101",
+    "description": [
+      "10.1\"Sparkle Seriyası LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Sparkle LCD/ZKS101.webp",
+    "categoryId": 15,
+    "technicalData": {
+      "dimensions": "243.2x152x14 mm",
+      "weight": "672q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "10.1\"",
+      "resolution": "1280x800",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "10.1\" LCD ekran",
+        "1280x800 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+  {
+    "id": 37,
+    "name": "10.1\" SPARKLE LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKLCD01.0101D",
+    "description": [
+      "10.1\"Sparkle Seriyası Double Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Sparkle LCD/ZKS101-D.webp",
+    "categoryId": 15,
+    "technicalData": {
+      "dimensions": "243.2x152x14 mm",
+      "weight": "672q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "10.1\"",
+      "resolution": "1280x800",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli iki tərəfli ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "10.1\" LCD ekran",
+        "1280x800 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+  {
+    "id": 38,
+    "name": "23.1\" LEGENDARY LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKL01.0231",
+    "description": [
+      "23.1\"Legendary Seriyası  Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Legendary LCD/ZKL231.webp",
+    "categoryId": 16,
+    "technicalData": {
+      "dimensions": "597.4x67.4x15.8 mm",
+      "weight": "751q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "23.1\"",
+      "resolution": "1920x158",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli LCD ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "23.1\" LCD ekran",
+        "1920x158 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+  {
+    "id": 38,
+    "name": "29\" LEGENDARY LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKL01.0290",
+    "description": [
+      "29\"Legendary Seriyası  Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Legendary LCD/ZKL290.webp",
+    "categoryId": 16,
+    "technicalData": {
+      "dimensions": "739.4x237.4x29.05 mm",
+      "weight": "820q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "29\"",
+      "resolution": "1920x540",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli LCD ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "29\" LCD ekran",
+        "1920x540 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+   {
+    "id": 39,
+    "name": "35\" LEGENDARY LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKL01.0350",
+    "description": [
+      "35\"Legendary Seriyası  Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Legendary LCD/ZKL350.webp",
+    "categoryId": 16,
+    "technicalData": {
+      "dimensions": "891.6x60.4x15.8 mm",
+      "weight": "856q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "35\"",
+      "resolution": "2880x158",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli LCD ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "35\" LCD ekran",
+        "2880x158 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+  {
+    "id": 40,
+    "name": "35.6\" LEGENDARY LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKL01.0356",
+    "description": [
+      "35.6\"Legendary Seriyası  Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Legendary LCD/ZKL356.webp",
+    "categoryId": 16,
+    "technicalData": {
+      "dimensions": "899.5x262.5x17.4 mm",
+      "weight": "856q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "35.6\"",
+      "resolution": "1920x533",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli LCD ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "35.6\" LCD ekran",
+        "1920x533 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+
+
+
+
+
+  {
+    "id": 41,
+    "name": "47\" LEGENDARY LCD REKLAM LÖVHƏSİ",
+    "stockCode": "ZKL01.0470",
+    "description": [
+      "47\"Legendary Seriyası  Screen LCD Lövhə təsviri",
+      "LCD Display 1080p"],
+    "descriptionImages":["files/LCD.png"],
+    "productType": "LCD",
+    "imagePath": "files/zkong_labels/Legendary LCD/ZKL470.webp",
+    "categoryId": 16,
+    "technicalData": {
+      "dimensions": "1211.2x67.5x24.3 mm",
+      "weight": "856q",
+      "operatingTemperature": "0°C to +40°C",
+      "storageTemperature": "-20°C to +60°C",
+      "humidity": "10% to 90% RH",
+      "batteryType": "USB və ya Rels",
+      "batteryLife": "Müddətsiz",
+      "powerConsumption": "< 0.3W",
+      "displayType": "LCD",
+      "displaySize": "47\"",
+      "resolution": "3840x160",
+      "viewingAngle": "180°",
+      "refreshRate": "0.2 saniyə",
+      "communicationProtocol": "2.4GHz",
+      "wirelessRange": "20m",
+      "features": [
+        "Yüksək təsvir qabiliyyətli LCD ekran",
+        "Ultra aşağı enerji sərfiyyatı",
+        "Asan quraşdırma",
+        "Çoxlu ekran rejimləri"
+      ],
+      "specifications": [
+        "47\" LCD ekran",
+        "3840x160 təsvir qabiliyyəti",
+        "Kabelli Qoşulma",
+        "IP65 qorunma"
+      ],
+      "warranty": "2 il"
+    }
+  },
+
+    
+
+
+  
+
+
+
+  {
+    "id": 42,
+    "name": "AP 2.4 GHZ ACCSESS POINT",
+    "stockCode": "ZKAP01.0001",
+    "description": ["AP 2.4 GHz Access Point təsviri"],
     "productType": "Gateway",
-    "imagePath": "files/urunler/RFG01.0001.png",
+    "imagePath": "files/accesuars/ZKAP01.0001.webp",
     "categoryId": 4,
     "technicalData": {
       "dimensions": "150x150x30 mm",
-      "weight": "200q",
+      "weight": "480q",
       "operatingTemperature": "-10°C to +50°C",
       "storageTemperature": "-20°C to +60°C",
       "humidity": "10% to 90% RH",
@@ -298,12 +1882,12 @@
     }
   },
   {
-    "id": 10,
-    "name": "RF DÜYMƏ TİPLİ PROQRAMLAŞDIRMA CİHAZI",
-    "stockCode": "RFU01.0001",
-    "description": ["RF Düymə Tipli Proqramlaşdırma Cihazı təsviri"],
+    "id": 43,
+    "name": "DÜYMƏ TİPLİ PROQRAMLAŞDIRMA CİHAZI",
+    "stockCode": "PDAU01.0001",
+    "description": ["Düymə Tipli Proqramlaşdırma Cihazı təsviri"],
     "productType": "ProgrammingDevice",
-    "imagePath": "files/urunler/RFU01.0001.png",
+    "imagePath": "files/demo_kits/PDA2.avif",
     "categoryId": 4,
     "technicalData": {
       "dimensions": "80x40x15 mm",
@@ -326,16 +1910,16 @@
         "USB şarj",
         "5m simsiz məsafə"
       ],
-      "warranty": "1 il"
+      "warranty": "2 il"
     }
   },
   {
-    "id": 11,
-    "name": "RF SKANER TİPLİ PROQRAMLAŞDIRMA CİHAZI",
-    "stockCode": "RFU01.0002",
-    "description": ["RF Skaner Tipli Proqramlaşdırma Cihazı təsviri"],
+    "id": 44,
+    "name": "SKANER TİPLİ PROQRAMLAŞDIRMA CİHAZI",
+    "stockCode": "PDAU01.0002",
+    "description": ["Skaner Tipli Proqramlaşdırma Cihazı təsviri"],
     "productType": "ProgrammingDevice",
-    "imagePath": "files/urunler/RFU01.0001.png",
+    "imagePath": "files/demo_kits/PDA1.webp",
     "categoryId": 4,
     "technicalData": {
       "dimensions": "180x70x30 mm",
@@ -360,11 +1944,11 @@
         "Bluetooth bağlantısı",
         "USB şarj"
       ],
-      "warranty": "1 il"
+      "warranty": "2 il"
     }
   },
   {
-    "id": 12,
+    "id": 45,
     "name": "RF SERVER VƏ PROQRAM TƏMİNATI",
     "stockCode": "RFS01.0001",
     "description": ["RF Server və Proqram Təminatı təsviri"],
@@ -393,7 +1977,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 46,
     "name": "RF KÖMƏKÇİ SERVER",
     "stockCode": "RFS01.0002",
     "description": ["RF Köməkçi Server təsviri"],
@@ -422,163 +2006,417 @@
     }
   },
   {
-    "id": 14,
-    "name": "RFE01.0154 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0001",
-    "description": ["RFE01.0154 Plastik Qoruyucu təsviri"],
+    "id": 47,
+    "name": "ZK04.0112 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0112",
+    "description": ["ZK04.0112 Relslər təsviri"],
     "productType": "Accessory",
     "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0101.png",
-    "categoryId": 7
-  },
-  {
-    "id": 15,
-    "name": "RFE01.0213 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0002",
-    "description": ["RFE01.0213 Plastik Qoruyucu təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0201.png",
-    "categoryId": 7
-  },
-  {
-    "id": 16,
-    "name": "RFE01.0290 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0003",
-    "description": ["RFE01.0290 Plastik Qoruyucu təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0301.png",
-    "categoryId": 7
-  },
-  {
-    "id": 17,
-    "name": "RFE01.0420 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0004",
-    "description": ["RFE01.0420 Plastik Qoruyucu təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0401.png",
-    "categoryId": 7
-  },
-  {
-    "id": 18,
-    "name": "RFE01.0750 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0005",
-    "description": ["RFE01.0750 Plastik Qoruyucu təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0101.png",
-    "categoryId": 7
-  },
-  {
-    "id": 19,
-    "name": "RFE01.1160 PLASTİK QORUYUCU",
-    "stockCode": "RFA01.0006",
-    "description": ["RFE01.1160 Plastik Qoruyucu təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "ProtectiveCover",
-    "imagePath": "files/urunler/RFA01.0101.png",
-    "categoryId": 7
-  },
-  {
-    "id": 20,
-    "name": "RAY ESL 30CM",
-    "stockCode": "RFS02.0030",
-    "description": ["ESL 30CM rel təsviri"],
-    "productType": "Accessory",
-    "accessoriesType": "Rail",
-    "imagePath": "files/urunler/RFS02.0001.png",
+    "imagePath": "files/accesuars/RAIL/esl-rail-7.webp",
     "categoryId": 6
   },
   {
-    "id": 21,
-    "name": "RAY ESL 60CM",
-    "stockCode": "RFS02.0060",
-    "description": ["ESL 60CM rel təsviri"],
+    "id": 48,
+    "name": "ZK04.0113 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0113",
+    "description": ["ZK04.0113 Relslər təsviri"],
     "productType": "Accessory",
-    "accessoriesType": "Rail",
-    "imagePath": "files/urunler/RFS02.0001.png",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/esl-rail-15.webp",
     "categoryId": 6
   },
   {
-    "id": 22,
+    "id": 49,
+    "name": "ZK04.0114 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0114",
+    "description": ["ZK04.0114 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/iot-cloud-applications.webp",
+    "categoryId": 6
+  },
+  {
+    "id": 50,
+    "name": "ZK04.0115 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0115",
+    "description": ["ZK04.0115 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/iot-cloud-based-data.webp",
+    "categoryId": 6
+  },
+  {
+    "id": 51,
+    "name": "ZK04.0116 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0116",
+    "description": ["ZK04.0116 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/remote-iot-platform.webp",
+    "categoryId": 6
+  },
+   {
+    "id": 52,
+    "name": "ZK04.0117 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0117",
+    "description": ["ZK04.0117 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/saas-iot-platform.webp",
+    "categoryId": 6
+  },
+  {
+    "id": 53,
+    "name": "ZK04.0118 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0118",
+    "description": ["ZK04.0118 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/esl-rail-1_1717746526.webp",
+    "categoryId": 6
+  },
+  {
+    "id": 54,
+    "name": "ZK04.0119 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0119",
+    "description": ["ZK04.0119 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/esl-rail-6_1717746752.webp",
+    "categoryId": 6
+  },
+
+
+{
+    "id": 55,
+    "name": "ZK04.0120 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0120",
+    "description": ["ZK04.0120 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/esl-rail-12.webp",
+    "categoryId": 6
+  },
+
+
+{
+    "id": 56,
+    "name": "ZK04.0121 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0121",
+    "description": ["ZK04.0121 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/esl-rail-13.webp",
+    "categoryId": 6
+  },
+
+{
+    "id": 57,
+    "name": "ZK04.0122 STANDART RƏFLƏR ÜÇÜN RELS",
+    "stockCode": "ZK04.0122",
+    "description": ["ZK04.0122 Relslər təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProtectiveCover",
+    "imagePath": "files/accesuars/RAIL/industrial-iot-cloud_1707187845.webp",
+    "categoryId": 6
+  },
+
+
+
+  {
+    "id": 58,
     "name": "MASAÜSTÜ STAND (TƏK)",
-    "stockCode": "RFA03.0001",
+    "stockCode": "ZK04.0123",
     "description": ["Tək masaüstü stand təsviri"],
     "productType": "Accessory",
     "accessoriesType": "DesktopStand",
-    "imagePath": "files/urunler/RFA03.0101.png",
+    "imagePath": "files/accesuars/Holder/electronic-shelf.webp",
     "categoryId": 8
   },
+
+ {
+    "id": 59,
+    "name": "MASAÜSTÜ STAND (TƏK)",
+    "stockCode": "ZK04.0124",
+    "description": ["Tək masaüstü stand təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "DesktopStand",
+    "imagePath": "files/accesuars/Holder/iot-cloud-platform-open-source.webp",
+    "categoryId": 8
+  },
+
+{
+    "id": 60,
+    "name": "MASAÜSTÜ STAND (TƏK)",
+    "stockCode": "ZK04.0125",
+    "description": ["Tək masaüstü stand təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "DesktopStand",
+    "imagePath": "files/accesuars/Holder/iot-cloud-providers.webp",
+    "categoryId": 8
+  },
+
   {
-    "id": 23,
-    "name": "MASAÜSTÜ STAND (ÇOXLU)",
-    "stockCode": "RFA03.0002",
+    "id":61,
+    "name": "MASAÜSTÜ STAND (TƏK)",
+    "stockCode": "ZK04.0126",
     "description": ["Çoxlu masaüstü stand təsviri"],
     "productType": "Accessory",
     "accessoriesType": "DesktopStand",
-    "imagePath": "files/urunler/RFA03.0101.png",
+    "imagePath": "files/accesuars/Holder/iot-cloud-server.webp",
     "categoryId": 8
   },
   {
-    "id": 24,
-    "name": "PROFİL TUTUCU",
-    "stockCode": "RFA04.0001",
+    "id": 62,
+    "name": "PROFİL TUTUCU / QISQAC",
+    "stockCode": "ZK04.0126",
     "description": ["Profil tutucu təsviri"],
     "productType": "Accessory",
     "accessoriesType": "ProfileHolder",
-    "imagePath": "files/urunler/RFA04.0101.png",
+    "imagePath": "files/accesuars/ZKONG Clamp/iot-platform-on-premise.webp",
     "categoryId": 9
   },
+
   {
-    "id": 25,
+    "id": 63,
+    "name": "PROFİL TUTUCU / QISQAC",
+    "stockCode": "ZK04.0127",
+    "description": ["Profil tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProfileHolder",
+    "imagePath": "files/accesuars/ZKONG Clamp/iot-to-cloud.webp",
+    "categoryId": 9
+  },
+
+
+
+   {
+    "id": 64,
+    "name": "PROFİL TUTUCU / QISQAC",
+    "stockCode": "ZK04.0128",
+    "description": ["Profil tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProfileHolder",
+    "imagePath": "files/accesuars/ZKONG Clamp/meta-iot-cloud.webp",
+    "categoryId": 9
+  },
+
+  {
+    "id": 65,
+    "name": "PROFİL TUTUCU / QISQAC",
+    "stockCode": "ZK04.0129",
+    "description": ["Profil tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProfileHolder",
+    "imagePath": "files/accesuars/ZKONG Clamp/on-premise-iot-platform.webp",
+    "categoryId": 9
+  },
+
+
+  {
+    "id": 66,
+    "name": "PROFİL TUTUCU / QISQAC",
+    "stockCode": "ZK04.0130",
+    "description": ["Profil tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ProfileHolder",
+    "imagePath": "files/accesuars/ZKONG Clamp/paas-in-iot.webp",
+    "categoryId": 9
+  },
+
+
+  {
+    "id": 67,
     "name": "ASQI ESL",
-    "stockCode": "RFA05.0001",
+    "stockCode": "ZK04.0131",
     "description": ["ESL asqı təsviri"],
     "productType": "Accessory",
     "accessoriesType": "Hanger",
-    "imagePath": "files/urunler/RFA05.0101.png",
+    "imagePath": "files/accesuars/ZKONG Hook/adjustable-t-hook.webp",
     "categoryId": 10
   },
+
   {
-    "id": 26,
-    "name": "RAF KLİPSİ",
-    "stockCode": "RFA06.0001",
-    "description": ["Raf klipsi təsviri"],
+    "id": 68,
+    "name": "ASQI ESL",
+    "stockCode": "ZK04.0132",
+    "description": ["ESL asqı təsviri"],
     "productType": "Accessory",
-    "accessoriesType": "ShelfClip",
-    "imagePath": "files/urunler/RFA06.0101.png",
-    "categoryId": 11
+    "accessoriesType": "Hanger",
+    "imagePath": "files/accesuars/ZKONG Hook/iot-cloud-storage.webp",
+    "categoryId": 10
   },
+
+
   {
-    "id": 27,
+    "id": 69,
+    "name": "ASQI ESL",
+    "stockCode": "ZK04.0133",
+    "description": ["ESL asqı təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "Hanger",
+    "imagePath": "files/accesuars/ZKONG Hook/iot-paas-providers.webp",
+    "categoryId": 10
+  },
+
+
+
+  {
+    "id": 70,
+    "name": "ASQI ESL",
+    "stockCode": "ZK04.0134",
+    "description": ["ESL asqı təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "Hanger",
+    "imagePath": "files/accesuars/ZKONG Hook/s-hook.webp",
+    "categoryId": 10
+  },
+
+
+  {
+    "id": 71,
     "name": "MAQNİTLİ TUTUCU",
-    "stockCode": "RFA07.0001",
+    "stockCode": "ZK04.0134",
     "description": ["Maqnitli tutucu təsviri"],
     "productType": "Accessory",
     "accessoriesType": "MagneticHolder",
-    "imagePath": "files/urunler/RFA07.0101.png",
+    "imagePath": "files/accesuars/Wall Mounting Kit/iot-cloud-services.webp",
     "categoryId": 12
   },
+
   {
-    "id": 28,
-    "name": "VİNT TİPİ TUTUCU",
-    "stockCode": "RFA08.0001",
-    "description": ["Vint tipi tutucu təsviri"],
+    "id": 72,
+    "name": "MAQNİTLİ TUTUCU",
+    "stockCode": "ZK04.0135",
+    "description": ["Maqnitli tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "MagneticHolder",
+    "imagePath": "files/accesuars/Wall Mounting Kit/iot-cloud-solutions.webp",
+    "categoryId": 12
+  },
+
+
+  {
+    "id": 73,
+    "name": "MAQNİTLİ TUTUCU",
+    "stockCode": "ZK04.0136",
+    "description": ["Maqnitli tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "MagneticHolder",
+    "imagePath": "files/accesuars/Wall Mounting Kit/rail-end-cap.webp",
+    "categoryId": 12
+  },
+
+
+  {
+    "id": 74,
+    "name": "MAQNİTLİ TUTUCU",
+    "stockCode": "ZK04.0137",
+    "description": ["Maqnitli tutucu təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "MagneticHolder",
+    "imagePath": "files/accesuars/Wall Mounting Kit/rail-incline-spacer.webp",
+    "categoryId": 12
+  },
+
+
+
+
+  {
+    "id": 75,
+    "name": "DÖŞƏMƏ TİPİ DAYAQLAR",
+    "stockCode": "ZK04.0138",
+    "description": ["Döşəmə tipi dayaqlar təsviri"],
     "productType": "Accessory",
     "accessoriesType": "ScrewType",
-    "imagePath": "files/urunler/RFA08.0101.png",
+    "imagePath": "files/accesuars/Ice PinFloor StandCard Holder/card-holder.webp",
     "categoryId": 13
   },
+
+
   {
-    "id": 29,
-    "name": "SƏBƏT TUTUCU",
-    "stockCode": "RFA09.0001",
-    "description": ["Səbət tutucu təsviri"],
+    "id": 76,
+    "name": "DÖŞƏMƏ TİPİ DAYAQLAR",
+    "stockCode": "ZK04.0139",
+    "description": ["Döşəmə tipi dayaqlar təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ScrewType",
+    "imagePath": "files/accesuars/Ice PinFloor StandCard Holder/floor-stand-30.webp",
+    "categoryId": 13
+  },
+
+
+  {
+    "id": 77,
+    "name": "DÖŞƏMƏ TİPİ DAYAQLAR",
+    "stockCode": "ZK04.0140",
+    "description": ["Döşəmə tipi dayaqlar təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ScrewType",
+    "imagePath": "files/accesuars/Ice PinFloor StandCard Holder/floor-stand-301.webp",
+    "categoryId": 13
+  },
+
+  {
+    "id": 78,
+    "name": "DÖŞƏMƏ TİPİ DAYAQLAR",
+    "stockCode": "ZK04.0141",
+    "description": ["Döşəmə tipi dayaqlar təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "ScrewType",
+    "imagePath": "files/accesuars/Ice PinFloor StandCard Holder/ice-pin.webp",
+    "categoryId": 13
+  },
+
+
+  {
+    "id": 79,
+    "name": "ŞAQULİ SIXAC/T-MONTAJ",
+    "stockCode": "ZK04.0142",
+    "description": ["Şaquli sıxac / T-montaj təsviri"],
     "productType": "Accessory",
     "accessoriesType": "BasketHolder",
-    "imagePath": "files/urunler/RFA09.0101.png",
+    "imagePath": "files/accesuars/Vertical ClampT MountRemove Tool/t-mount-4.webp",
+    "categoryId": 14
+  },
+
+
+
+  {
+    "id": 80,
+    "name": "ŞAQULİ SIXAC/T-MONTAJ",
+    "stockCode": "ZK04.0143",
+    "description": ["Şaquli sıxac / T-montaj təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "BasketHolder",
+    "imagePath": "files/accesuars/Vertical ClampT MountRemove Tool/vertical-clamp-1.webp",
+    "categoryId": 14
+  },
+
+
+  {
+    "id": 81,
+    "name": "ŞAQULİ SIXAC/T-MONTAJ",
+    "stockCode": "ZK04.0144",
+    "description": ["Şaquli sıxac / T-montaj təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "BasketHolder",
+    "imagePath": "files/accesuars/Vertical ClampT MountRemove Tool/vertical-clamp-2.webp",
+    "categoryId": 14
+  },
+
+  {
+    "id": 82,
+    "name": "ÇIXARMA ALƏTİ",
+    "stockCode": "ZK04.0145",
+    "description": ["Çıxarma aləti təsviri"],
+    "productType": "Accessory",
+    "accessoriesType": "BasketHolder",
+    "imagePath": "files/accesuars/Vertical ClampT MountRemove Tool/remove-tool.webp",
     "categoryId": 14
   }
+
+
+
+
 ] 

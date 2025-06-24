@@ -21,14 +21,28 @@ export class ProductService {
     },
     {
       id: 2,
-      name: 'Elektronik Raf Etiketləri',
-      slug: 'elektronik-raf-etiketleri',
+      name: 'Elektronik Rəf Etiketləri',
+      slug: 'elektronik-Rəf-etiketleri',
+      products: []
+    },
+    {
+      id: 15,
+      name: 'LCD Lövhələr',
+      slug: 'lcd-lovheler',
+      products: []
+    },
+
+
+    {
+      id: 16,
+      name: 'LCD Rəf Ekranları',
+      slug: 'lcd-ref-ekranlari',
       products: []
     },
     {
       id: 3,
-      name: 'Xüsusi Elektronik Raf Etiketləri',
-      slug: 'ozel-elektronik-raf-etiketleri',
+      name: 'Xüsusi Elektronik Rəf Etiketləri',
+      slug: 'ozel-elektronik-Rəf-etiketleri',
       products: []
     },
     {
@@ -79,8 +93,8 @@ export class ProductService {
         },
         {
           id: 11,
-          name: 'Raf Klipsləri',
-          slug: 'raf-klipsleri',
+          name: 'Rəf Klipsləri',
+          slug: 'Rəf-klipsleri',
           parentId: 5,
           products: []
         },
@@ -106,7 +120,8 @@ export class ProductService {
           products: []
         }
       ]
-    }
+    },
+    
   ];
   
   constructor(private http: HttpClient) { }
