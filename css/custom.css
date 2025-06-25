@@ -877,13 +877,6 @@ header .topmenu .top-data li a.log-top:hover {
   margin: 0 auto 20px auto;
 }
 
-.heading-border-light {
-  width: 30px;
-  height: 5px;
-  background-color: #ed1c24;
-  margin: 0 0 20px 0;
-}
-
 .title-bar p {
   color: #717171;
 }
@@ -2707,13 +2700,6 @@ address.address-details-f a {
 
 #shop-p1 {
   padding: 50px 0;
-}
-
-#shop-p1 .shop-p1-title h3 {
-  padding: 0;
-  margin-bottom: 5px;
-  text-transform: none;
-  font-size: 30px;
 }
 
 #shop-p1 .list-group-item:first-child,
