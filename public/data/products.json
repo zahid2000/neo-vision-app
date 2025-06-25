@@ -51,7 +51,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/1.54V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "44.2x35.9x12.1 mm",
       "weight": "20q",
@@ -91,7 +91,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/1.8V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "52.5x35.9x12.1 mm",
       "weight": "22q",
@@ -131,7 +131,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/2.13V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "70x34.5x12.1 mm",
       "weight": "25q",
@@ -171,7 +171,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/2.66V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "83x41x12.1 mm",
       "weight": "28q",
@@ -211,7 +211,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/2.9V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "90x41x12.1 mm",
       "weight": "38q",
@@ -251,7 +251,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/3.7V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "103.6x57x11.2 mm",
       "weight": "52q",
@@ -292,7 +292,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/4.2V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "104.8x87x12.8 mm",
       "weight": "76q",
@@ -332,7 +332,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/5.8V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "135.4x110x9 mm",
       "weight": "85q",
@@ -372,7 +372,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/7.5DE.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "180.8x121.8x9 mm",
       "weight": "92q",
@@ -413,7 +413,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/10.2V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "215.5x173x9.5 mm",
       "weight": "122q",
@@ -454,7 +454,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/11.6V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "266.3x190x9 mm",
       "weight": "252q",
@@ -495,7 +495,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Valley/13.3V.jpg",
-    "categoryId": 2,
+    "categoryId": 17,
     "technicalData": {
       "dimensions": "298.3x225.5x10.3 mm",
       "weight": "265q",
@@ -541,7 +541,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/1.8B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "54.2x36.9x9.5 mm",
       "weight": "42q",
@@ -585,7 +585,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/2.13B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "65x37x9.5 mm",
       "weight": "45q",
@@ -628,7 +628,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/2.2B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "67.9x37x10 mm",
       "weight": "48q",
@@ -672,7 +672,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/2.66UB.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "84.2x40.5x7.5 mm",
       "weight": "52q",
@@ -715,7 +715,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/2.9B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "92x41.5x7.5 mm",
       "weight": "61q",
@@ -758,7 +758,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/3.5B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "101.5x55x11.5 mm",
       "weight": "67q",
@@ -802,7 +802,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/4.2B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "103.5x87x10.5 mm",
       "weight": "75q",
@@ -845,7 +845,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/4.3B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "129.7x41.3x9 mm",
       "weight": "67q",
@@ -890,7 +890,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/5.8B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "132x109x13 mm",
       "weight": "82q",
@@ -933,7 +933,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Blade/7.5B.jpg",
-    "categoryId": 2,
+    "categoryId": 18,
     "technicalData": {
       "dimensions": "176x123x13 mm",
       "weight": "115q",
@@ -982,7 +982,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/1.54.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "44.2x35.9x12.1 mm",
       "weight": "20q",
@@ -1030,7 +1030,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/2.13.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "70x34.5x12.1 mm",
       "weight": "25q",
@@ -1075,7 +1075,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/2.6.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "83x41x12.1 mm",
       "weight": "28q",
@@ -1120,7 +1120,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/2.7.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "85x43x12.1 mm",
       "weight": "30q",
@@ -1165,7 +1165,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/2.9.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "90x41x12.1 mm",
       "weight": "38q",
@@ -1205,7 +1205,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Shield/3.7.jpg",
-    "categoryId": 2,
+    "categoryId": 19,
     "technicalData": {
       "dimensions": "103.6x57x11.2 mm",
       "weight": "52q",
@@ -1252,7 +1252,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Essence Colorful/5.8FCOLOR.jpg",
-    "categoryId": 2,
+    "categoryId": 20,
     "technicalData": {
       "dimensions": "132x109x13 mm",
       "weight": "82q",
@@ -1296,7 +1296,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Essence Colorful/7.3FCOLOR.jpg",
-    "categoryId": 2,
+   "categoryId": 20,
     "technicalData": {
       "dimensions": "176x123x13 mm",
       "weight": "115q",
@@ -1345,7 +1345,7 @@
     "descriptionImages":["files/NFC.png"],
     "productType": "ESL",
     "imagePath": "files/zkong_labels/Essence Colorful/8.2.jpg",
-    "categoryId": 2,
+   "categoryId": 20,
     "technicalData": {
       "dimensions": "200x137x11 mm",
       "weight": "140q",

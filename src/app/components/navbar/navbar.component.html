@@ -65,19 +65,20 @@
           <li class="nav-item">
             <a class="nav-link smooth-scroll" routerLink="home">ƏSAS SƏHİFƏ</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link smooth-scroll" routerLink="about">ŞİRKƏT</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-company" aria-haspopup="true" aria-expanded="false" style="cursor: pointer">ŞİRKƏT</a>
+            <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-company">
+              <a class="dropdown-item" routerLink="about"><span>Haqqımızda</span></a>
+              <div class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" style="cursor: pointer">Media</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" routerLink="galery"><span>Galareya</span></a>
+                  <a class="dropdown-item" routerLink="download-center"><span>Katalog</span></a>
+                </div>
+              </div>
+              <a class="dropdown-item" routerLink="references"><span>Referanslar</span></a>
+            </div>
           </li>
-          <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-2"
-                            aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">ŞİRKƏT</a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-2">
-                            <a class="dropdown-item" routerLink="about"><span>HAQQIMIZDA</span></a>
-                             <a class="dropdown-item" href="kurumsal/kvkk.html"><span>K.V.K.K.</span></a>
-                            <a class="dropdown-item" href="kurumsal/cerez-politikasi.html"><span>ÇEREZ POLİTİKASI</span></a>
-                            <a class="dropdown-item" href="kurumsal/mesafeli-satis-sozlesmesi.html"><span>Mesafeli Satış Sözleşmesi</span></a> 
-                        </div>
-                    </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-3" aria-haspopup="true"
               aria-expanded="false" style="cursor: pointer">MƏHSULLAR</a>
@@ -109,18 +110,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link smooth-scroll" routerLink="how-it-works">Necə Çalışır?</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle smooth-scroll" data-toggle="dropdown" id="ndlink-10" aria-haspopup="true"
-              aria-expanded="false" style="cursor: pointer">Media</a>
-            <div class="dropdown-menu dropdown-cust" aria-labelledby="ndlink-10">
-              <!-- <a class="dropdown-item" href="haberler/index.html"><span>Xəbərlər</span></a> -->
-              <a class="dropdown-item" routerLink="galery"><span>Galareya</span></a>
-              <a class="dropdown-item" routerLink="download-center"><span>Katalog</span></a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smooth-scroll" routerLink="references">Referanslar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link smooth-scroll" routerLink="contact">ƏLAQƏ</a>

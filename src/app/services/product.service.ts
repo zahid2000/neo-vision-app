@@ -23,7 +23,32 @@ export class ProductService {
       id: 2,
       name: 'Elektronik Rəf Etiketləri',
       slug: 'elektronik-Rəf-etiketleri',
-      products: []
+      children: [
+        {
+          id: 17,
+          name: 'Valley Seriyası',
+          slug: 'valley-eriyası',
+          products: []
+        },
+          {
+            id: 18,
+            name: 'Blade Seriyası',
+            slug: 'blade-seriyası',
+            products: []
+          },
+          {
+            id: 19,
+            name: 'Shield Seriyası',
+            slug: 'shield-seriyası',
+            products: []
+          },
+          {
+            id: 20,
+            name: 'Essence Colorful Seriyası',
+            slug: 'essence-colorful-seriyası',
+            products: []
+          },
+      ]
     },
     {
       id: 15,
@@ -39,12 +64,12 @@ export class ProductService {
       slug: 'lcd-ref-ekranlari',
       products: []
     },
-    {
-      id: 3,
-      name: 'Xüsusi Elektronik Rəf Etiketləri',
-      slug: 'ozel-elektronik-Rəf-etiketleri',
-      products: []
-    },
+    // {
+    //   id: 3,
+    //   name: 'Xüsusi Elektronik Rəf Etiketləri',
+    //   slug: 'ozel-elektronik-Rəf-etiketleri',
+    //   products: []
+    // },
     {
       id: 4,
       name: 'Köməkçi Avadanlıq və Proqram Təminatı',
