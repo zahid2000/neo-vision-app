@@ -1,105 +1,69 @@
-<div id="home-p" class="home-p pages-head1 text-center">
-    <div class="container">
-        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Necə İşləyir?</h1>
-    </div>
+<div class="howit-header">
+  <div class="container">
+    <h1 class="howit-title">Necə İşləyir?</h1>
+  </div>
 </div>
 
-<section id="faq-p1" class="team-p1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link" [ngClass]="{'active': activeTab === 'nav-2'}" (click)="setTab('nav-2')"
-                            id="nav-2-tab" type="button" role="tab" aria-controls="nav-2"
-                            [attr.aria-selected]="activeTab === 'nav-2'">
-                            ESL Nədir?
-                        </button>
-                        <button class="nav-link" [ngClass]="{'active': activeTab === 'nav-3'}" (click)="setTab('nav-3')"
-                            id="nav-3-tab" type="button" role="tab" aria-controls="nav-3"
-                            [attr.aria-selected]="activeTab === 'nav-3'">
-                            Necə İşləyir?
-                        </button>
-                        <button class="nav-link" [ngClass]="{'active': activeTab === 'nav-4'}" (click)="setTab('nav-4')"
-                            id="nav-4-tab" type="button" role="tab" aria-controls="nav-4"
-                            [attr.aria-selected]="activeTab === 'nav-4'">
-                            Üstünlükləri Nələrdir?
-                        </button>
-                    </div>
-
-                    <div class="tab-content p-2" id="nav-tabContent">
-                        <div class="tab-pane fade" [ngClass]="{'show active': activeTab === 'nav-2'}" id="nav-2"
-                            role="tabpanel" aria-labelledby="nav-2-tab">
-                            <p>Elektronik rəf etiketi, pərakəndə sektorunda istifadə edilən və məhsul qiymətləri, ehtiyat
-                                məlumatları, promosyonlar və digər əlaqəli məlumatları göstərmək üçün hazırlanmış bir növ
-                                etiketdir. Bu etiketlər adətən rəfin üzərinə yerləşdirilir və məhsulla əlaqəli
-                                məlumatları elektronik olaraq göstərir. Elektronik rəf etiketləri, ənənəvi kağız
-                                etiketlərə görə bir sıra üstünlüklər təqdim edir.</p>
-
-                            <p class="text-center"><img style=" max-width: 50% !important;" src="files/content/esl.jfif"> </p>
-                        </div>
-                        <div class="tab-pane fade" [ngClass]="{'show active': activeTab === 'nav-3'}" id="nav-3"
-                            role="tabpanel" aria-labelledby="nav-3-tab">
-                            <p>ZkongEsl tətbiqimiz, müəssisənizdə istifadə etdiyiniz ERP, POS, CRM və MCR proqramları ilə
-                                asanlıqla inteqrasiya edilə bilər. İnteqrasiya uğurla tamamlandıqdan sonra, məhsullarınız
-                                ZkongEsl tətbiqimizdə siyahıya alınır. Bu məhsullar, ZkongEsl tətbiqində etiketlərlə
-                                uyğunlaşdırılır. Sonra istədiyiniz dizaynı edərək etiketlərə məlumat ötürə bilərsiniz.
-                                Dizayn səhifəsində QR kod, barkod və ya şəkillər əlavə edə bilərsiniz. Dizayn və etiket
-                                uyğunlaşdırma addımları tamamlandıqdan sonra, elektronik etiketləri rəflərə quraşdıra
-                                bilərsiniz. Hər cür quraşdırma formasına uyğun aksesuar həllərimiz mövcuddur.</p>
-                            <p>Elektronik rəf etiketlərinin yenilənməsi üçün ZkongEsl baz stansiyasına ehtiyac
-                                duyulur. Baz stansiyasının quraşdırılması olduqca sadədir; müəssisənizdə mövcud olan LAN şəbəkəsinə
-                                qoşularaq lazımi parametrlər edildikdən sonra istifadəyə başlaya bilərsiniz.</p>
-                            <p>ERP, POS, CRM və MCR proqramlarında məhsulun satış qiymətini, mənşəyini, son istifadə
-                                tarixini və ya istehsal tarixini dəyişdirdiyinizdə, ZkongEsl proqramımız bu dəyişiklikləri
-                                avtomatik olaraq aşkarlayır və rəflərdə olan etiketləri yeniləyir.</p>
-                            <p>Bu əməliyyat, birdən çox filial idarəetməsi olan yerlərdə də tək mərkəzdən idarə imkanı təqdim edir.
-                            </p>
-                            <p>ZkongEsl tətbiqimiz offline bir şəkildə də işləyir. Məhsullarınızı manual olaraq
-                                əlavə edə bilər və etiket üzərində dəyişməli olan məlumatları ZkongEsl tətbiqı üzərindən
-                                manual bir şəkildə dəyişdirə, etiket idarəetməsini kompüter başında da
-                                edə bilərsiniz.&nbsp;</p>
-                            <p style="text-align: center;"><img style=" max-width: 50% !important;" src="files/content/how-it-works.jfif"><br></p>
-                        </div>
-                        <div class="tab-pane fade" [ngClass]="{'show active': activeTab === 'nav-4'}" id="nav-4"
-                            role="tabpanel" aria-labelledby="nav-4-tab">
-                            <b>Dinamik Yeniləmələr: </b>Qiymət, məhsul məlumatları və ehtiyat vəziyyəti ani olaraq
-                            yenilənə bilər. Bu, mağaza idarəetməsinin qiymətləri və məlumatları sürətli dəyişdirməsinə imkan
-                            verir.
-                            <br><br>
-                            <b>Aşağı Enerji İstehlakı: </b>Elektronik rəf etiketləri adətən e-ink (elektronik
-                            mürəkkəb) texnologiyasından istifadə edir, bu da aşağı enerji istehlakı deməkdir. Bu etiketlər
-                            yalnız ekran yeniləmə zamanı enerji istehlak edir.
-                            <br><br>
-                            <b>Yüksək Oxunaqlıq: </b>E-ink ekranlar, təbii kağız kimi görünür və xüsusilə işıqlı
-                            mühitlərdə yüksək oxunaqlıq təmin edir. İşığı əks etdirmir və gözü yormur.
-                            <br><br>
-                            <b>Uzun Batareya Ömrü: </b>Elektronik rəf etiketləri adətən uzunömürlü batareyalarla işləyir. Batareya
-                            ömrü 5 ilə qədər davam edə bilər, bu da baxım və dəyişdirmə ehtiyacını azaldır.
-                            <br><br>
-                            <b>Xərc Qənaəti: </b>Kağız etiketlərin və çap xərclərinin aradan qalxması ilə uzun
-                            müddətdə xərc qənaəti təmin edir. Həmçinin, etiketlərin təkrar istifadə edilə bilməsi də
-                            xərcləri azaldır.
-                            <br><br>
-                            <b>Təkmilləşdirilmiş İnteqrasiya: </b>ERP və POS sistemləri ilə asanlıqla inteqrasiya edilə bilər. Bu, ehtiyat
-                            idarəetməsini, qiymət yeniləmələrini və məlumat analitikasını daha effektiv edir.
-                            <b>Sürətli və Asan Quraşdırma: </b>Etiketlər, simsiz şəbəkələr üzərindən mərkəzdən asanlıqla
-                            yenilənə bilər. Bu, mağazanın operativ effektivliyini artırır.
-                            <br><br>
-                            <b>Daha Yaxşı Məlumat İdarəetməsi: </b>Məhsul məlumatları, qiymətlər və promosyonlar kimi məlumatlar
-                            asanlıqla yenilənə bilər və düzgün məlumat həmişə ekranda göstərilir.
-                            <br><br>
-                            <b>Estetik və Nizamlı Görünüş: </b>Müasir görünüşə malik olan elektronik rəf etiketləri,
-                            mağazalarda daha nizamlı və professional bir estetik təmin edir.
-                            <br><br>
-                            <b>Geri Dönüşüm və Ətraf Mühit Dostu: </b>Kağız etiketlərin yerini tutduğu üçün kağız istehlakını
-                            azaldır və ətraf mühitə təsirini minimuma endirir.
-                        </div>
-                    </div>
-                </nav>
-            </div>
+<section class="howit-section">
+  <div class="container">
+    <div class="howit-card">
+      <nav>
+        <div class="nav howit-tabs" id="nav-tab" role="tablist">
+          <button class="howit-tab" [ngClass]="{'active': activeTab === 'nav-2'}" (click)="setTab('nav-2')"
+            id="nav-2-tab" type="button" role="tab" aria-controls="nav-2"
+            [attr.aria-selected]="activeTab === 'nav-2'">
+            ESL Nədir?
+          </button>
+          <button class="howit-tab" [ngClass]="{'active': activeTab === 'nav-3'}" (click)="setTab('nav-3')"
+            id="nav-3-tab" type="button" role="tab" aria-controls="nav-3"
+            [attr.aria-selected]="activeTab === 'nav-3'">
+            Necə İşləyir?
+          </button>
+          <button class="howit-tab" [ngClass]="{'active': activeTab === 'nav-4'}" (click)="setTab('nav-4')"
+            id="nav-4-tab" type="button" role="tab" aria-controls="nav-4"
+            [attr.aria-selected]="activeTab === 'nav-4'">
+            Üstünlükləri Nələrdir?
+          </button>
         </div>
+
+        <div class="howit-tab-content" id="nav-tabContent">
+          <div class="howit-pane" [ngClass]="{'show active': activeTab === 'nav-2'}" id="nav-2"
+            role="tabpanel" aria-labelledby="nav-2-tab">
+            <p>Elektronik rəf etiketi, pərakəndə sektorunda istifadə edilən və məhsul qiymətləri, ehtiyat məlumatları, promosyonlar və digər əlaqəli məlumatları göstərmək üçün hazırlanmış bir növ etiketdir. Bu etiketlər adətən rəfin üzərinə yerləşdirilir və məhsulla əlaqəli məlumatları elektronik olaraq göstərir. Elektronik rəf etiketləri, ənənəvi kağız etiketlərə görə bir sıra üstünlüklər təqdim edir.</p>
+            <div class="howit-img-wrap">
+              <img src="files/content/esl.jfif" alt="ESL Nədir?">
+            </div>
+          </div>
+          <div class="howit-pane" [ngClass]="{'show active': activeTab === 'nav-3'}" id="nav-3"
+            role="tabpanel" aria-labelledby="nav-3-tab">
+            <p>ZkongEsl tətbiqimiz, müəssisənizdə istifadə etdiyiniz ERP, POS, CRM və MCR proqramları ilə asanlıqla inteqrasiya edilə bilər. İnteqrasiya uğurla tamamlandıqdan sonra, məhsullarınız ZkongEsl tətbiqimizdə siyahıya alınır. Bu məhsullar, ZkongEsl tətbiqində etiketlərlə uyğunlaşdırılır. Sonra istədiyiniz dizaynı edərək etiketlərə məlumat ötürə bilərsiniz. Dizayn səhifəsində QR kod, barkod və ya şəkillər əlavə edə bilərsiniz. Dizayn və etiket uyğunlaşdırma addımları tamamlandıqdan sonra, elektronik etiketləri rəflərə quraşdıra bilərsiniz. Hər cür quraşdırma formasına uyğun aksesuar həllərimiz mövcuddur.</p>
+            <p>Elektronik rəf etiketlərinin yenilənməsi üçün ZkongEsl baz stansiyasına ehtiyac duyulur. Baz stansiyasının quraşdırılması olduqca sadədir; müəssisənizdə mövcud olan LAN şəbəkəsinə qoşularaq lazımi parametrlər edildikdən sonra istifadəyə başlaya bilərsiniz.</p>
+            <p>ERP, POS, CRM və MCR proqramlarında məhsulun satış qiymətini, mənşəyini, son istifadə tarixini və ya istehsal tarixini dəyişdirdiyinizdə, ZkongEsl proqramımız bu dəyişiklikləri avtomatik olaraq aşkarlayır və rəflərdə olan etiketləri yeniləyir.</p>
+            <p>Bu əməliyyat, birdən çox filial idarəetməsi olan yerlərdə də tək mərkəzdən idarə imkanı təqdim edir.</p>
+            <p>ZkongEsl tətbiqimiz offline bir şəkildə də işləyir. Məhsullarınızı manual olaraq əlavə edə bilər və etiket üzərində dəyişməli olan məlumatları ZkongEsl tətbiqı üzərindən manual bir şəkildə dəyişdirə, etiket idarəetməsini kompüter başında da edə bilərsiniz.</p>
+            <div class="howit-img-wrap">
+              <img src="files/content/how-it-works.jfif" alt="Necə işləyir?">
+            </div>
+          </div>
+          <div class="howit-pane" [ngClass]="{'show active': activeTab === 'nav-4'}" id="nav-4"
+            role="tabpanel" aria-labelledby="nav-4-tab">
+            <ul class="howit-advantages">
+              <li><b>Dinamik Yeniləmələr:</b> Qiymət, məhsul məlumatları və ehtiyat vəziyyəti ani olaraq yenilənə bilər. Bu, mağaza idarəetməsinin qiymətləri və məlumatları sürətli dəyişdirməsinə imkan verir.</li>
+              <li><b>Aşağı Enerji İstehlakı:</b> Elektronik rəf etiketləri adətən e-ink (elektronik mürəkkəb) texnologiyasından istifadə edir, bu da aşağı enerji istehlakı deməkdir. Bu etiketlər yalnız ekran yeniləmə zamanı enerji istehlak edir.</li>
+              <li><b>Yüksək Oxunaqlıq:</b> E-ink ekranlar, təbii kağız kimi görünür və xüsusilə işıqlı mühitlərdə yüksək oxunaqlıq təmin edir. İşığı əks etdirmir və gözü yormur.</li>
+              <li><b>Uzun Batareya Ömrü:</b> Elektronik rəf etiketləri adətən uzunömürlü batareyalarla işləyir. Batareya ömrü 5 ilə qədər davam edə bilər, bu da baxım və dəyişdirmə ehtiyacını azaldır.</li>
+              <li><b>Xərc Qənaəti:</b> Kağız etiketlərin və çap xərclərinin aradan qalxması ilə uzun müddətdə xərc qənaəti təmin edir. Həmçinin, etiketlərin təkrar istifadə edilə bilməsi də xərcləri azaldır.</li>
+              <li><b>Təkmilləşdirilmiş İnteqrasiya:</b> ERP və POS sistemləri ilə asanlıqla inteqrasiya edilə bilər. Bu, ehtiyat idarəetməsini, qiymət yeniləmələrini və məlumat analitikasını daha effektiv edir.</li>
+              <li><b>Sürətli və Asan Quraşdırma:</b> Etiketlər, simsiz şəbəkələr üzərindən mərkəzdən asanlıqla yenilənə bilər. Bu, mağazanın operativ effektivliyini artırır.</li>
+              <li><b>Daha Yaxşı Məlumat İdarəetməsi:</b> Məhsul məlumatları, qiymətlər və promosyonlar kimi məlumatlar asanlıqla yenilənə bilər və düzgün məlumat həmişə ekranda göstərilir.</li>
+              <li><b>Estetik və Nizamlı Görünüş:</b> Müasir görünüşə malik olan elektronik rəf etiketləri, mağazalarda daha nizamlı və professional bir estetik təmin edir.</li>
+              <li><b>Geri Dönüşüm və Ətraf Mühit Dostu:</b> Kağız etiketlərin yerini tutduğu üçün kağız istehlakını azaldır və ətraf mühitə təsirini minimuma endirir.</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
+  </div>
 </section>
 
 <app-footer-contact></app-footer-contact>

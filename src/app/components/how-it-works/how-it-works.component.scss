@@ -1,0 +1,142 @@
+.howit-header {
+  background: url('/files/banner-1.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.howit-header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+.howit-title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.howit-section {
+  background: #f7f7f9;
+  padding: 40px 0 60px 0;
+}
+
+.howit-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 40px 32px 32px 32px;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.howit-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.howit-tab {
+  background: #ed1c24;
+  color: #fff;
+  border: none;
+  border-radius: 24px 24px 0 0;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(237,28,36,0.08);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.howit-tab.active, .howit-tab:hover {
+  background: #fff;
+  color: #ed1c24;
+  box-shadow: 0 4px 16px rgba(237,28,36,0.10);
+}
+
+.howit-tab-content {
+  padding: 24px 0 0 0;
+}
+
+.howit-pane {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+.howit-pane.show.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.howit-img-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0 0;
+}
+.howit-img-wrap img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.howit-advantages {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.howit-advantages li {
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  font-size: 1.08rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  transition: background 0.2s;
+}
+.howit-advantages li b {
+  color: #ed1c24;
+}
+
+@media (max-width: 900px) {
+  .howit-card {
+    padding: 24px 8px 16px 8px;
+  }
+  .howit-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .howit-header {
+    padding: 36px 0 20px 0;
+  }
+  .howit-title {
+    font-size: 1.3rem;
+  }
+  .howit-card {
+    padding: 12px 2px 8px 2px;
+  }
+  .howit-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .howit-tab {
+    width: 100%;
+    border-radius: 16px;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .howit-img-wrap img {
+    max-width: 100%;
+  }
+}
