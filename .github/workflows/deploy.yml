@@ -30,7 +30,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/neo-vision-app/browser
+          folder: dist/neo-vision-app/browser/
           branch: gh-pages 
 
       - name: Deploy to FTP Hosting
@@ -39,5 +39,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/neo-vision-app/browser
+          local-dir: dist/neo-vision-app/browser/
           server-dir: /public_html/
