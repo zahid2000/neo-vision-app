@@ -33,7 +33,7 @@ jobs:
           folder: dist/neo-vision-app/browser
           branch: gh-pages 
 
-       - name: Deploy to FTP Hosting
+      - name: Deploy to FTP Hosting
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
